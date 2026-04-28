@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Vivek Menon Menon's personal portfolio – MCA Student, Developer & Tech Enthusiast from Kerala, India." />
+  <title>Vivek Menon Menon| Portfolio</title>
+  <link rel="stylesheet" href="style.css?v=23" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+
+  <canvas id="fluid-canvas"></canvas>
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- ===== NAV ===== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link" data-section="home">Home</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">About Me</a></li>
+        <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+        <li><a href="#achievements" class="nav-link" data-section="achievements">Achievements</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Global Scroll Progress Bar -->
+  <div class="scroll-progress-container">
+    <div class="scroll-progress-bar" id="scroll-progress"></div>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section id="home" class="hero">
+    <div class="hero-content reveal">
+      <h1 class="hero-name">Vivek Menon</h1>
+      <div class="hero-subtitle">
+        <span class="static-text">MCA Student &nbsp;|&nbsp; </span>
+        <span class="typed-text" id="typed-text"></span>
+        <span class="cursor">|</span>
+      </div>
+      <p class="hero-desc">Building elegant solutions to complex problems. Passionate about web development, AI, and
+        crafting beautiful digital experiences.</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-code"></i> View Projects</a>
+        <a href="#contact" class="btn btn-outline"><i class="fa-solid fa-paper-plane"></i> Contact Me</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://www.linkedin.com/in/vivek-menon-/" target="_blank" title="LinkedIn"><i
+            class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/vivekmenon2004" target="_blank" title="GitHub"><i
+            class="fa-brands fa-github"></i></a>
+        <a href="mailto:vivekmenonv2004@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://www.instagram.com/vk___vy/" target="_blank" title="Instagram"><i
+            class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="hero-illustration reveal">
+      <div class="code-card glass">
+        <div class="code-dots"><span></span><span></span><span></span></div>
+        <pre><code><span class="kw">const</span> <span class="fn">developer</span> = {
+  <span class="key">name</span>: <span class="str">"Vivek Menon"</span>,
+  <span class="key">degree</span>: <span class="str">"MCA"</span>,
+  <span class="key">skills</span>: [<span class="str">"Python"</span>,
+            <span class="str">"Django"</span>, <span class="str">"AI"</span>, <span class="str">"ML"</span>],
+  <span class="key">passion</span>: <span class="str">"Building cool stuff"</span>,
+  <span class="fn">greet</span>: () =&gt; <span class="str">"Hello World! "</span>
+};</code></pre>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll Down</span>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Get to know me</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-image-wrap reveal">
+          <div class="id-card">
+            <img src="assets/images/profile.png" alt="Vivek Menon profile photo" class="id-profile-img" />
+            <div class="id-card-body">
+              <h3 class="id-name">Vivek Menon</h3>
+              <p class="id-role">MCA Student & Developer</p>
+            </div>
+            <div class="id-card-socials">
+              <a href="https://www.linkedin.com/in/vivek-menon-/" target="_blank" class="id-social-btn"><i
+                  class="fa-brands fa-linkedin-in"></i></a>
+              <a href="https://www.instagram.com/vk___vy/" target="_blank" class="id-social-btn"><i
+                  class="fa-brands fa-instagram"></i></a>
+              <a href="mailto:vivekmenonv2004@gmail.com" class="id-social-btn"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="about-content reveal">
+          <h3>MCA Student &amp; Passionate Developer</h3>
+          <p>I am an <strong>MCA student</strong> passionate about software development, UI design, and graphic design,
+            with a strong interest in building creative and impactful digital solutions. I enjoy transforming complex
+            ideas into clean, efficient, and visually appealing applications that provide a great user experience.</p>
+          <p>My interests include <strong>web development, artificial intelligence</strong>, and user interface design,
+            where I combine technical skills with creativity to build meaningful digital products. I believe that
+            technology should not only work well but also look intuitive and engaging for users.</p>
+          <p>I constantly challenge myself to learn new technologies, improve my design thinking, and develop innovative
+            projects. Outside of coding, I enjoy experimenting with new design concepts, exploring emerging tech trends,
+            and working on creative digital ideas that blend technology with visual storytelling.</p>
+          <div class="skills-wrap">
+            <div class="skill-tag">Python</div>
+            <div class="skill-tag">Django</div>
+            <div class="skill-tag">UI/UX</div>
+            <div class="skill-tag">ML</div>
+            <div class="skill-tag">HTML/CSS</div>
+            <div class="skill-tag">MySQL</div>
+            <div class="skill-tag">Git</div>
+            <div class="skill-tag">AWS</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section id="education" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">My Academic Journey</span>
+        <h2 class="section-title">Edu<span class="gradient-text">cation</span></h2>
+      </div>
+      <div class="edu-grid">
+        <a href="https://stantonyscollegepeerumade.ac.in/" target="_blank" class="edu-card reveal"
+          style="--card-index: 1;">
+          <img src="assets/images/college_bca.png" alt="St Antony's College" class="edu-bg-img" />
+          <div class="edu-overlay"></div>
+          <div class="edu-body">
+            <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="edu-badge">BCA</div>
+            <h3>Bachelor of Computer Applications</h3>
+            <p class="edu-college"><i class="fa-solid fa-location-dot"></i> St Antony's College, Peruvanthanam</p>
+            <p class="edu-year"><i class="fa-regular fa-calendar"></i> 2022 - 2025</p>
+          </div>
+        </a>
+        <a href="https://mariancollege.org/" target="_blank" class="edu-card reveal" style="--card-index: 2;">
+          <img src="assets/images/college_mca.png" alt="Marian College" class="edu-bg-img" />
+          <div class="edu-overlay"></div>
+          <div class="edu-body">
+            <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="edu-badge">MCA</div>
+            <h3>Master of Computer Applications</h3>
+            <p class="edu-college"><i class="fa-solid fa-location-dot"></i> Marian College, Kuttikkanam</p>
+            <p class="edu-year"><i class="fa-regular fa-calendar"></i> 2025 - 2027</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">What I've Built</span>
+        <h2 class="section-title">My <span class="gradient-text">Projects</span></h2>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card reveal" style="--card-index: 1;" fs-modal-element="open">
+          <div class="project-img-wrap">
+            <img src="assets/images/mediconnect.png" alt="Medileaf Screenshot" class="project-img" />
+            <div class="project-overlay">
+              <a href="https://github.com/vivekmenon2004/Medileaf" target="_blank" class="project-link-btn"><i
+                  class="fa-solid fa-expand"></i> View Details</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags"><span>Python</span><span>Django</span><span>Web</span></div>
+            <h3 class="project-title">Medileaf</h3>
+            <p class="project-desc">Medileaf is a healthcare management platform that connects patients with doctors
+              through an online appointment booking system.</p>
+            <a href="https://github.com/vivekmenon2004/Medileaf" target="_blank" class="btn btn-sm"><i
+                class="fa-solid fa-plus"></i> View More</a>
+          </div>
+        </div>
+
+        <div class="project-card reveal" style="--card-index: 2;" fs-modal-element="open">
+          <div class="project-img-wrap">
+            <img src="assets/images/ml_predictor.png" alt="Machine Learning Models Screenshot" class="project-img" />
+            <div class="project-overlay">
+              <a href="https://github.com/vivekmenon2004/AI-Predictor-Engine" target="_blank"
+                class="project-link-btn"><i class="fa-solid fa-expand"></i> View Details</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags"><span>Python</span><span>Scikit-Learn</span><span>ML Algorithms</span></div>
+            <h3 class="project-title">Machine Learning Models</h3>
+            <p class="project-desc">This project involves implementing five algorithms to analyze
+              datasets and make predictions across classification problems.</p>
+            <a href="https://github.com/vivekmenon2004/AI-Predictor-Engine" target="_blank" class="btn btn-sm"><i
+                class="fa-solid fa-plus"></i> View More</a>
+          </div>
+        </div>
+
+        <div class="project-card reveal" style="--card-index: 3;" fs-modal-element="open">
+          <div class="project-img-wrap">
+            <img src="assets/images/turftime.png" alt="TurfTime Screenshot" class="project-img" />
+            <div class="project-overlay">
+              <a href="https://github.com/vivekmenon2004/TurfTime" target="_blank" class="project-link-btn"><i
+                  class="fa-solid fa-expand"></i> View Details</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags"><span>Python</span><span>Django</span><span>HTML/CSS</span></div>
+            <h3 class="project-title">TurfTime</h3>
+            <p class="project-desc">TurfTime is a smart sports turf booking system designed to simplify the process of
+              reserving sports grounds online.</p>
+            <a href="https://github.com/vivekmenon2004/TurfTime" target="_blank" class="btn btn-sm"><i
+                class="fa-solid fa-plus"></i> View More</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="reveal" style="text-align: center; margin-top: 60px;">
+        <a href="https://github.com/vivekmenon2004?tab=repositories" target="_blank" class="btn btn-primary">
+          <i class="fa-brands fa-github"></i> View All Projects
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section id="experience" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">What I've Done</span>
+        <h2 class="section-title">Expe<span class="gradient-text">rience</span></h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal" style="--card-index: 1;">
+          <div class="timeline-dot"><i class="fa-brands fa-instagram"></i></div>
+          <div class="timeline-card glass">
+            <div class="timeline-header">
+              <div>
+                <h3>Social Media Manager</h3>
+                <p class="timeline-org"><i class="fa-solid fa-building"></i> E-Cell, St Antony's College, Peruvanthanam
+                </p>
+              </div>
+              <span class="timeline-badge">2023 - 2025</span>
+            </div>
+            <p>Managed social media presence across platforms, crafted content strategies, and promoted entrepreneurship
+              initiatives. Helped grow the E-Cell community and increase student engagement in startup culture.</p>
+            <div class="timeline-skills"><span>Social Media</span><span>Content Strategy</span><span>Community
+                Building</span></div>
+          </div>
+        </div>
+        <div class="timeline-item reveal" style="--card-index: 2;">
+          <div class="timeline-dot"><i class="fa-solid fa-user-tie"></i></div>
+          <div class="timeline-card glass">
+            <div class="timeline-header">
+              <div>
+                <h3>Department Student Convener</h3>
+                <p class="timeline-org"><i class="fa-solid fa-building"></i> PG Dept of Computer Applications, Marian
+                  College, Kuttikkanam</p>
+              </div>
+              <span class="timeline-badge">2025 - 2027</span>
+            </div>
+            <p>Coordinated departmental activities, organized academic and cultural events, and served as a bridge
+              between students and faculty. Led initiatives to enhance student engagement and departmental excellence.
+              Maintained all program documents ensuring accurate and up-to-date academic records.
+            </p>
+            <div class="timeline-skills"><span>Leadership</span><span>Event Management</span><span>Communication</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACHIEVEMENTS ===== -->
+  <section id="achievements" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Recognition</span>
+        <h2 class="section-title">Achieve<span class="gradient-text">ments</span></h2>
+      </div>
+      <div class="achievements-grid">
+        <a href="https://www.ecell.in/nec/" target="_blank" class="achievement-card glass reveal featured"
+          style="display:block; cursor:pointer; text-decoration:none;">
+          <div class="achievement-glow"></div>
+          <div class="achievement-badge">🥈 First Runner Up</div>
+          <h3 class="achievement-title">NEC IIT Bombay 2024</h3>
+
+          <div
+            style="margin: 20px auto; max-width: 450px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(0,0,0,0.1); box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+            <img src="assets/images/nec.jpg" alt="NEC IIT Bombay Winners"
+              style="width: 100%; height: auto; display: block;" />
+          </div>
+
+          <p class="achievement-desc">Achieved First Runner Up at the National Entrepreneurship Challenge organized by
+            IIT Bombay's E-Cell – one of India's most prestigious entrepreneurship competitions.</p>
+          <div class="achievement-meta">
+            <span><i class="fa-regular fa-calendar"></i> 2024</span>
+            <span><i class="fa-solid fa-location-dot"></i> IIT Bombay</span>
+            <span><i class="fa-solid fa-users"></i> National Level</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Let's Connect</span>
+        <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3>Let's work together!</h3>
+          <p>I'm always open to discussing new opportunities, collaborations, or just having a conversation about tech.
+            Feel free to reach out!</p>
+          <div class="contact-items">
+            <a href="mailto:vivekmenonv2004@gmail.com" class="contact-item glass">
+              <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div><strong>Email</strong><span>vivekmenonv2004@gmail.com</span></div>
+            </a>
+            <a href="https://www.linkedin.com/in/vivek-menon-/" target="_blank" class="contact-item glass">
+              <div class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+              <div><strong>LinkedIn</strong><span>linkedin.com/in/vivek-menon-</span></div>
+            </a>
+            <a href="https://www.instagram.com/vk___vy/" target="_blank" class="contact-item glass">
+              <div class="contact-icon"><i class="fa-brands fa-instagram"></i></div>
+              <div><strong>Instagram</strong><span>@vk___vy</span></div>
+            </a>
+            <a href="https://github.com/vivekmenon2004" target="_blank" class="contact-item glass">
+              <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+              <div><strong>GitHub</strong><span>github.com/vivekmenon2004</span></div>
+            </a>
+          </div>
+        </div>
+        <div class="contact-form-wrap reveal">
+          <!-- Hidden iframe for Google Form submission -->
+          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+            onload="if(window.submitted){showSuccess();}"></iframe>
+
+          <form class="contact-form glass" id="contactForm"
+            action="https://docs.google.com/forms/d/e/1FAIpQLScwlJta_IOm80P8MTc_2q-GDn5yiGEIsHkrAjQitu2GESkh6Q/formResponse"
+            method="POST" target="hidden_iframe">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="entry.1453801150" placeholder="John Doe" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="entry.1338144488" placeholder="john@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="entry.1055435793" rows="5"
+                placeholder="Tell me about your project or idea..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="sendBtn">
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+            <div class="form-success" id="formSuccess">
+              <i class="fa-solid fa-circle-check"></i> Message sent! I'll get back to you soon.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <a class="nav-logo" href="#home"><span class="logo-bracket">&lt;</span>Vivek Menon<span
+          class="logo-bracket">/&gt;</span></a>
+      <p class="footer-text">Designed &amp; Built by <strong>Vivek Menon</strong> &nbsp;·&nbsp; © 2026 AllRights
+        Reserved</p>
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/vivek-menon-/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/vivekmenon2004" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.instagram.com/vk___vy/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="mailto:vivekmenonv2004@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Project Modals Template (Hidden by default) -->
+  <div class="modal_component" fs-modal-element="modal" fs-modal-animation="fade" fs-modal-duration="400"
+    style="display:none;">
+    <div class="modal_overlay" fs-modal-element="close"></div>
+    <div class="modal_content reveal">
+      <div class="modal_close-btn" fs-modal-element="close"><i class="fa-solid fa-xmark"></i></div>
+      <div class="modal_body">
+        <div class="modal_image-wrap">
+          <img src="" alt="Project Image" class="modal_image" id="modal-project-img" />
+        </div>
+        <div class="modal_info">
+          <div class="project-tags" id="modal-project-tags"></div>
+          <h2 class="modal_title" id="modal-project-title">Project Name</h2>
+          <p class="modal_desc" id="modal-project-desc">Project description goes here...</p>
+          <div class="modal_btns">
+            <a href="#" target="_blank" class="btn btn-primary" id="modal-project-link"><i
+                class="fa-brands fa-github"></i> View Repository</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Theme Toggle -->
+  <button id="theme-toggle" class="theme-toggle floating" aria-label="Toggle Theme">
+    <i class="fa-solid fa-moon"></i>
+  </button>
+
+  <script src="script.js?v=23"></script>
+</body>
+
+</html>
