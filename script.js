@@ -646,10 +646,14 @@ if (contactForm) {
   const icon = toggleBtn.querySelector('i');
 
   const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'dark') {
+  if (savedTheme === 'dark' || savedTheme === null) {
     document.documentElement.setAttribute('data-theme', 'dark');
     icon.classList.remove('fa-moon');
     icon.classList.add('fa-sun');
+  } else {
+    document.documentElement.removeAttribute('data-theme');
+    icon.classList.remove('fa-sun');
+    icon.classList.add('fa-moon');
   }
 
   toggleBtn.addEventListener('click', () => {
