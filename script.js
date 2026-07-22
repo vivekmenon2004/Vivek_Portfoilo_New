@@ -671,3 +671,79 @@ if (contactForm) {
     }
   });
 })();
+
+/* ============================
+   PROFILE POPUP MODAL
+   ============================ */
+(function initProfilePopup() {
+  const trigger  = document.getElementById('profile-img-trigger');
+  const overlay  = document.getElementById('profile-popup-overlay');
+  const closeBtn = document.getElementById('profile-popup-close');
+  const card     = document.getElementById('profile-popup-card');
+
+  if (!trigger || !overlay) return;
+
+  function openPopup() {
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closePopup() {
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  trigger.addEventListener('click', openPopup);
+  closeBtn.addEventListener('click', closePopup);
+
+  // Close when clicking the backdrop (outside the card)
+  overlay.addEventListener('click', (e) => {
+    if (!card.contains(e.target)) closePopup();
+  });
+
+  // Close with Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closePopup();
+  });
+})();
+
+/* ============================
+   TWO MODES TOGGLE CARD
+   ============================ */
+(function initToggleCard() {
+  const toggle      = document.getElementById('tc-toggle');
+  const designPanel = document.getElementById('tc-design-panel');
+  const codePanel   = document.getElementById('tc-code-panel');
+  const badge       = document.getElementById('tc-badge');
+  if (!toggle) return;
+
+  let isCode = false;
+
+  function switchToCode() {
+    isCode = true;
+    toggle.classList.add('code-active');
+    designPanel.classList.remove('active');
+    codePanel.classList.add('active');
+    badge.textContent = 'Developer Mode';
+  }
+
+  function switchToDesign() {
+    isCode = false;
+    toggle.classList.remove('code-active');
+    codePanel.classList.remove('active');
+    designPanel.classList.add('active');
+    badge.textContent = 'Designer Mode';
+  }
+
+  toggle.addEventListener('click', () => {
+    isCode ? switchToDesign() : switchToCode();
+  });
+
+  // Auto-cycle every 5s for first-time visitors
+  let autoCycle = setInterval(() => {
+    isCode ? switchToDesign() : switchToCode();
+  }, 5000);
+
+  // Stop auto-cycle once user interacts
+  toggle.addEventListener('click', () => clearInterval(autoCycle), { once: true });
+})();

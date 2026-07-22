@@ -63,7 +63,8 @@
         crafting beautiful digital experiences.</p>
       <div class="hero-btns">
         <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-code"></i> View Projects</a>
-        <a href="#contact" class="btn btn-outline"><i class="fa-solid fa-paper-plane"></i> Contact Me</a>
+        <a href="assets/images/Vivek Menon CV.pdf" download="Vivek_Menon_CV.pdf" class="btn btn-outline btn-glow"><i
+            class="fa-solid fa-download"></i> Download CV</a>
       </div>
       <div class="hero-socials">
         <a href="https://www.linkedin.com/in/vivek-menon-/" target="_blank" title="LinkedIn"><i
@@ -76,18 +77,103 @@
       </div>
     </div>
     <div class="hero-illustration reveal">
-      <div class="code-card glass">
-        <div class="code-dots"><span></span><span></span><span></span></div>
-        <pre><code><span class="kw">const</span> <span class="fn">developer</span> = {
-  <span class="key">name</span>: <span class="str">"Vivek Menon"</span>,
-  <span class="key">degree</span>: <span class="str">"MCA"</span>,
-  <span class="key">skills</span>: [<span class="str">"Python"</span>,
-            <span class="str">"Django"</span>, <span class="str">"AI"</span>, <span class="str">"ML"</span>],
-  <span class="key">passion</span>: <span class="str">"Building cool stuff"</span>,
-  <span class="fn">greet</span>: () =&gt; <span class="str">"Hello World! "</span>
-};</code></pre>
+      <div class="toggle-card glass" id="toggle-card">
+
+        <!-- Top bar with toggle -->
+        <div class="tc-header">
+          <div class="tc-window-dots">
+            <span style="background:#ff5f57"></span>
+            <span style="background:#febc2e"></span>
+            <span style="background:#28c840"></span>
+          </div>
+          <div class="tc-toggle-wrap" id="tc-toggle" title="Switch mode">
+            <span class="tc-toggle-label" id="tc-label-design">Designer</span>
+            <div class="tc-switch">
+              <div class="tc-thumb"></div>
+            </div>
+            <span class="tc-toggle-label" id="tc-label-code">Developer</span>
+          </div>
+          <div class="tc-mode-badge" id="tc-badge">Designer Mode</div>
+        </div>
+
+        <!-- DESIGN PANEL -->
+        <div class="tc-panel tc-design active" id="tc-design-panel">
+
+          <!-- Grid lines overlay -->
+          <div class="tc-grid"></div>
+
+          <!-- Color palette -->
+          <div class="tc-design-section tc-colors">
+            <span class="tc-ds-label">Color System</span>
+            <div class="tc-palette-row">
+              <div class="tc-ds-swatch" style="background:#111111;"><span>#111</span></div>
+              <div class="tc-ds-swatch" style="background:#333333;"><span>#333</span></div>
+              <div class="tc-ds-swatch" style="background:#555555;"><span>#555</span></div>
+              <div class="tc-ds-swatch" style="background:#AAAAAA;"><span>#AAA</span></div>
+              <div class="tc-ds-swatch" style="background:#FFFFFF; border:1px solid rgba(0,0,0,0.15);"><span
+                  style="color:#333">#FFF</span></div>
+            </div>
+          </div>
+
+          <!-- Typography specimen -->
+          <div class="tc-design-section tc-type">
+            <span class="tc-ds-label">Typography</span>
+            <div class="tc-type-specimen">
+              <div class="tc-type-row">
+                <span class="tc-type-size">H1</span>
+                <span class="tc-type-sample tc-t-h1">Vivek</span>
+              </div>
+              <div class="tc-type-row">
+                <span class="tc-type-size">H2</span>
+                <span class="tc-type-sample tc-t-h2">Design Engineer</span>
+              </div>
+              <div class="tc-type-row">
+                <span class="tc-type-size">p</span>
+                <span class="tc-type-sample tc-t-p">Crafting logic wrapped in beautiful pixels.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Component preview -->
+          <div class="tc-design-section tc-components">
+            <span class="tc-ds-label">Components</span>
+            <div class="tc-comp-row">
+              <span class="tc-comp-btn filled">Primary</span>
+              <span class="tc-comp-btn ghost">Outline</span>
+              <span class="tc-comp-tag">Badge</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- CODE PANEL -->
+        <div class="tc-panel tc-code" id="tc-code-panel">
+          <!-- Grid lines overlay -->
+          <div class="tc-grid"></div>
+          <div class="tc-code-topbar">
+            <div class="tc-code-dots">
+              <span style="background:#ff5f57"></span>
+              <span style="background:#febc2e"></span>
+              <span style="background:#28c840"></span>
+            </div>
+            <span class="tc-code-filename">developer.py</span>
+          </div>
+          <pre class="tc-code-pre"><span class="tc-kw">class</span> <span class="tc-fn">Developer</span>:
+  <span class="tc-kw">def</span> <span class="tc-fn">__init__</span>(<span class="tc-self">self</span>):
+    <span class="tc-self">self</span>.<span class="tc-key">name</span>    = <span class="tc-str">"Vivek Menon"</span>
+    <span class="tc-self">self</span>.<span class="tc-key">degree</span>  = <span class="tc-str">"MCA"</span>
+    <span class="tc-self">self</span>.<span class="tc-key">skills</span>  = [
+      <span class="tc-str">"Python"</span>, <span class="tc-str">"Django"</span>,
+      <span class="tc-str">"AI/ML"</span>,  <span class="tc-str">"UI/UX"</span>
+    ]
+
+  <span class="tc-kw">def</span> <span class="tc-fn">greet</span>(<span class="tc-self">self</span>):
+    <span class="tc-kw">return</span> <span class="tc-str">"Hello World! 🚀"</span></pre>
+        </div>
+
       </div>
     </div>
+
     <div class="scroll-indicator">
       <div class="scroll-mouse">
         <div class="scroll-wheel"></div>
@@ -106,10 +192,16 @@
       <div class="about-grid">
         <div class="about-image-wrap reveal">
           <div class="id-card">
-            <img src="assets/images/profile.png" alt="Vivek Menon profile photo" class="id-profile-img" />
+            <!-- Shimmer sweep -->
+            <div class="id-card-shimmer"></div>
+            <!-- Avatar with glow -->
+            <div class="id-avatar-wrap">
+              <img src="assets/images/viv.png" alt="Vivek Menon profile photo" class="id-profile-img"
+                id="profile-img-trigger" title="Click to view profile" />
+            </div>
             <div class="id-card-body">
               <h3 class="id-name">Vivek Menon</h3>
-              <p class="id-role">MCA Student & Developer</p>
+              <p class="id-role">MCA Student &amp; Developer</p>
             </div>
             <div class="id-card-socials">
               <a href="https://www.linkedin.com/in/vivek-menon-/" target="_blank" class="id-social-btn"><i
@@ -158,7 +250,7 @@
       <div class="edu-grid">
         <a href="https://stantonyscollegepeerumade.ac.in/" target="_blank" class="edu-card reveal"
           style="--card-index: 1;">
-          <img src="assets/images/college_bca.png" alt="St Antony's College" class="edu-bg-img" />
+          <img src="assets/images/sta.jpg" alt="St Antony's College" class="edu-bg-img" />
           <div class="edu-overlay"></div>
           <div class="edu-body">
             <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
@@ -458,6 +550,45 @@
             <a href="#" target="_blank" class="btn btn-primary" id="modal-project-link"><i
                 class="fa-brands fa-github"></i> View Repository</a>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PROFILE POPUP MODAL ===== -->
+  <div id="profile-popup-overlay" class="profile-popup-overlay" aria-modal="true" role="dialog"
+    aria-label="Vivek Menon profile card">
+    <div class="profile-popup-card glass" id="profile-popup-card">
+      <button class="profile-popup-close" id="profile-popup-close" aria-label="Close"><i
+          class="fa-solid fa-xmark"></i></button>
+      <div class="profile-popup-img-wrap">
+        <img src="assets/images/viv.png" alt="Vivek Menon" class="profile-popup-img" />
+      </div>
+      <div class="profile-popup-body">
+        <h3 class="profile-popup-name">Vivek Menon</h3>
+        <p class="profile-popup-role">MCA Student &amp; Developer</p>
+        <p class="profile-popup-location"><i class="fa-solid fa-location-dot"></i> Kerala, India</p>
+        <div class="profile-popup-divider"></div>
+        <div class="profile-popup-socials">
+          <a href="https://www.linkedin.com/in/vivek-menon-/" target="_blank" class="profile-popup-social-btn linkedin"
+            title="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/vivekmenon2004" target="_blank" class="profile-popup-social-btn github"
+            title="GitHub">
+            <i class="fa-brands fa-github"></i>
+            <span>GitHub</span>
+          </a>
+          <a href="https://www.instagram.com/vk__vy/" target="_blank" class="profile-popup-social-btn instagram"
+            title="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+            <span>Instagram</span>
+          </a>
+          <a href="mailto:vivekmenonv2004@gmail.com" class="profile-popup-social-btn email" title="Email">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Email</span>
+          </a>
         </div>
       </div>
     </div>
