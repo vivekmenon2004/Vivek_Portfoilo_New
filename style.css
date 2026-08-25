@@ -515,11 +515,13 @@ img {
 }
 
 @keyframes btn-glow-pulse {
+
   0%,
   100% {
     box-shadow: 0 0 8px var(--switch-glow),
       0 0 18px var(--switch-glow-subtle);
   }
+
   50% {
     box-shadow: 0 0 16px var(--switch-glow),
       0 0 30px var(--switch-glow-subtle);
@@ -2508,10 +2510,12 @@ body.cursor-pressed #cursor-ring {
   .toggle-card {
     min-height: 480px;
   }
+
   .tc-design {
     display: flex;
     flex-direction: column;
   }
+
   .tc-design-section.tc-colors,
   .tc-design-section.tc-type,
   .tc-design-section.tc-components {
@@ -2833,3 +2837,335 @@ body.cursor-pressed #cursor-ring {
 }
 
 /* strings */
+
+/* ============================
+   WHAT'S NEW - EXPAND ON HOVER HORIZONTAL SCROLL DECK
+   ============================ */
+.whats-new-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.whats-new-track {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding: 20px 10px 40px 10px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-hover) transparent;
+  align-items: stretch;
+}
+
+.whats-new-track::-webkit-scrollbar {
+  height: 6px;
+}
+
+.whats-new-track::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.whats-new-track::-webkit-scrollbar-thumb {
+  background: var(--border-hover);
+  border-radius: 10px;
+}
+
+.whats-new-track::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Rectangle ExpandOnHover Card */
+.whats-new-card {
+  flex: 0 0 300px !important;
+  width: 300px !important;
+  min-width: 300px !important;
+  max-width: 480px;
+  height: 440px;
+  scroll-snap-align: start;
+  border-radius: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  box-sizing: border-box;
+  transition: flex 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    width 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    min-width 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+/* Expand On Hover / Active state */
+.whats-new-card:hover,
+.whats-new-card.active {
+  flex: 0 0 450px !important;
+  width: 450px !important;
+  min-width: 450px !important;
+  border-color: var(--border-hover);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+}
+
+/* Card Media Header */
+.wn-media-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 180px;
+  overflow: hidden;
+  background: var(--bg2);
+  flex-shrink: 0;
+}
+
+.wn-media-img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+}
+
+.whats-new-card:hover .wn-media-img,
+.whats-new-card.active .wn-media-img {
+  transform: scale(1.08);
+}
+
+.wn-media-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Card Body Content */
+.wn-card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.wn-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.wn-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid var(--border);
+  flex-shrink: 0;
+}
+
+.wn-author-info {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.wn-author-name {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--text);
+}
+
+.wn-linkedin-badge {
+  color: #0a66c2;
+  font-size: 0.95rem;
+}
+
+:root[data-theme="dark"] .wn-linkedin-badge {
+  color: #70b5f9;
+}
+
+.wn-author-role {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.wn-card-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 8px;
+  line-height: 1.35;
+}
+
+.wn-post-text {
+  font-size: 0.84rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.whats-new-card:hover .wn-post-text {
+  color: var(--text);
+  -webkit-line-clamp: 4;
+}
+
+.wn-card-footer {
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wn-stats {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}
+
+.wn-reaction-icons {
+  font-size: 0.85rem;
+}
+
+.wn-post-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #0a66c2;
+  background: rgba(10, 102, 194, 0.08);
+  border: 1px solid rgba(10, 102, 194, 0.2);
+  transition: var(--transition);
+}
+
+:root[data-theme="dark"] .wn-post-btn {
+  color: #70b5f9;
+  background: rgba(112, 181, 249, 0.1);
+  border-color: rgba(112, 181, 249, 0.25);
+}
+
+.wn-post-btn:hover {
+  background: #0a66c2;
+  color: #ffffff;
+  border-color: #0a66c2;
+  transform: translateY(-2px);
+}
+
+:root[data-theme="dark"] .wn-post-btn:hover {
+  background: #70b5f9;
+  color: #111111;
+  border-color: #70b5f9;
+}
+
+/* Left & Right Scroll Buttons */
+.wn-scroll-btn {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--border-hover);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  transition: var(--transition);
+}
+
+.wn-scroll-btn.left {
+  left: -20px;
+}
+
+.wn-scroll-btn.right {
+  right: -20px;
+}
+
+@media (max-width: 1240px) {
+  .wn-scroll-btn.left {
+    left: 4px;
+  }
+
+  .wn-scroll-btn.right {
+    right: 4px;
+  }
+}
+
+.wn-scroll-btn:hover {
+  background: var(--primary);
+  color: var(--bg);
+  border-color: transparent;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.wn-footer-action {
+  text-align: center;
+  margin-top: 24px;
+}
+
+@media (max-width: 576px) {
+  .whats-new-card {
+    flex: 0 0 85vw !important;
+    height: 420px;
+  }
+}
+
+/* Text-Only LinkedIn Post Card Styles */
+.whats-new-card.text-only .wn-card-content {
+  padding: 24px;
+}
+
+.whats-new-card.text-only .wn-post-text {
+  -webkit-line-clamp: 6;
+}
+
+.whats-new-card.text-only:hover .wn-post-text,
+.whats-new-card.text-only.active .wn-post-text {
+  -webkit-line-clamp: 10;
+}
+
+.wn-media-badge.text-only-badge {
+  position: relative;
+  top: auto;
+  right: auto;
+  margin-left: auto;
+}

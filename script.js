@@ -466,7 +466,7 @@ document.querySelectorAll('[fs-modal-element="open"]').forEach(card => {
   });
 
   // INTERACTIVE targets: links, buttons, cards → slightly larger hollow ring
-  const interactiveTargets = 'a, button, .btn, .project-card, .edu-card, .achievement-card';
+  const interactiveTargets = 'a, button, .btn, .project-card, .edu-card, .achievement-card, .whats-new-card, .wn-scroll-btn, .wn-post-btn';
   document.querySelectorAll(interactiveTargets).forEach(el => {
     el.addEventListener('mouseenter', () => {
       document.body.classList.add('cursor-hovering');
@@ -676,10 +676,10 @@ if (contactForm) {
    PROFILE POPUP MODAL
    ============================ */
 (function initProfilePopup() {
-  const trigger  = document.getElementById('profile-img-trigger');
-  const overlay  = document.getElementById('profile-popup-overlay');
+  const trigger = document.getElementById('profile-img-trigger');
+  const overlay = document.getElementById('profile-popup-overlay');
   const closeBtn = document.getElementById('profile-popup-close');
-  const card     = document.getElementById('profile-popup-card');
+  const card = document.getElementById('profile-popup-card');
 
   if (!trigger || !overlay) return;
 
@@ -711,10 +711,10 @@ if (contactForm) {
    TWO MODES TOGGLE CARD
    ============================ */
 (function initToggleCard() {
-  const toggle      = document.getElementById('tc-toggle');
+  const toggle = document.getElementById('tc-toggle');
   const designPanel = document.getElementById('tc-design-panel');
-  const codePanel   = document.getElementById('tc-code-panel');
-  const badge       = document.getElementById('tc-badge');
+  const codePanel = document.getElementById('tc-code-panel');
+  const badge = document.getElementById('tc-badge');
   if (!toggle) return;
 
   let isCode = false;
@@ -747,3 +747,149 @@ if (contactForm) {
   // Stop auto-cycle once user interacts
   toggle.addEventListener('click', () => clearInterval(autoCycle), { once: true });
 })();
+
+/* ============================
+   WHAT'S NEW - CAROUSEL & DYNAMIC LINKEDIN FEED
+   ============================ */
+(function initWhatsNewSection() {
+  const track = document.getElementById('whats-new-track');
+  const leftBtn = document.getElementById('wn-scroll-left');
+  const rightBtn = document.getElementById('wn-scroll-right');
+
+  if (!track) return;
+
+  const CURATOR_FEED_API = "https://api.curator.io/v1/feeds/136aed72-2234-40fc-a271-e11002e9348e/posts";
+  const LINKEDIN_LOCAL_JSON = "assets/data/linkedin_posts.json";
+
+  async function fetchPosts() {
+    // 1. Try Live Curator API Feed
+    try {
+      const res = await fetch(CURATOR_FEED_API);
+      if (!res.ok) throw new Error("Failed to fetch Curator API");
+      const json = await res.json();
+      if (json.success && Array.isArray(json.posts) && json.posts.length > 0) {
+        const formattedPosts = json.posts.map((p, idx) => {
+          const dateObj = new Date(p.source_created_at || Date.now());
+          const dateStr = dateObj.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+
+          const fullText = (p.text || '').trim();
+          const lines = fullText.split('\n').filter(l => l.trim().length > 0 && !l.trim().startsWith('#'));
+          let title = lines[0] || 'LinkedIn Post';
+          if (title.length > 55) {
+            title = title.substring(0, 52) + '...';
+          }
+
+          const hasMedia = Boolean(p.has_media || p.has_image || p.image || p.image_large || (p.images && p.images.length > 0));
+          const imageUrl = hasMedia ? (p.image_large || p.image || (p.images && p.images[0] ? p.images[0].url : null)) : null;
+          const totalReactions = (p.likes || 0) + (p.comments || 0);
+
+          return {
+            title: title,
+            text: fullText,
+            imageUrl: imageUrl,
+            postUrl: p.url || p.user_url || 'https://www.linkedin.com/in/vivek-menon-/',
+            date: dateStr,
+            badge: idx === 0 ? `${dateStr} • Latest` : dateStr,
+            reactions: totalReactions > 0 ? `${totalReactions} reactions` : 'LinkedIn Activity',
+            reactionIcons: '👍 🚀',
+            authorName: p.user_full_name || 'Vivek Menon',
+            authorAvatar: p.user_image || 'assets/images/vivek_new.jpeg',
+            authorRole: p.user_screen_name ? `@${p.user_screen_name}` : 'MCA Student & Dept Convener',
+            timestamp: p.source_created_at
+          };
+        });
+        renderPosts(formattedPosts);
+        return;
+      }
+    } catch (err) {
+      console.warn("Live Curator feed load skipped/failed, using local fallback:", err);
+    }
+
+    // 2. Local Fallback JSON
+    try {
+      const res = await fetch(LINKEDIN_LOCAL_JSON);
+      if (res.ok) {
+        const data = await res.json();
+        if (Array.isArray(data) && data.length > 0) {
+          renderPosts(data);
+          return;
+        }
+      }
+    } catch (e) {}
+
+    bindCardEvents();
+  }
+
+  function renderPosts(posts) {
+    if (!posts || !posts.length) return;
+
+    track.innerHTML = posts.map((post, idx) => `
+      <div class="whats-new-card glass ${idx === 0 ? 'active' : ''} ${!post.imageUrl ? 'text-only' : ''}" tabindex="0">
+        ${post.imageUrl ? `
+        <div class="wn-media-wrap">
+          <img src="${post.imageUrl}" alt="${escapeHtml(post.title)}" class="wn-media-img" loading="lazy" onerror="this.onerror=null;this.parentNode.style.display='none';" />
+          <div class="wn-media-badge">${escapeHtml(post.badge || post.date || 'Latest')}</div>
+        </div>
+        ` : ''}
+        <div class="wn-card-content">
+          <div class="wn-card-header">
+            <img src="${post.authorAvatar || 'assets/images/vivek_new.jpeg'}" alt="${escapeHtml(post.authorName || 'Vivek Menon')}" class="wn-avatar" onerror="this.onerror=null;this.src='assets/images/vivek_new.jpeg';" />
+            <div class="wn-author-info">
+              <div class="wn-author-name">
+                <span>${escapeHtml(post.authorName || 'Vivek Menon')}</span>
+                <i class="fa-brands fa-linkedin wn-linkedin-badge"></i>
+              </div>
+              <span class="wn-author-role">${escapeHtml(post.authorRole || 'MCA Student & Dept Convener')}</span>
+            </div>
+            ${!post.imageUrl ? `<div class="wn-media-badge text-only-badge">${escapeHtml(post.badge || post.date || 'Latest')}</div>` : ''}
+          </div>
+          <h3 class="wn-card-title">${escapeHtml(post.title)}</h3>
+          <p class="wn-post-text">${escapeHtml(post.text)}</p>
+          <div class="wn-card-footer">
+            <div class="wn-stats">
+              <span class="wn-reaction-icons">${post.reactionIcons || '👍 🚀'}</span>
+              <span>${escapeHtml(post.reactions || 'Reactions')} • ${escapeHtml(post.date || '')}</span>
+            </div>
+            <a href="${post.postUrl || 'https://www.linkedin.com/in/vivek-menon-/'}" target="_blank" rel="noopener noreferrer" class="wn-post-btn">
+              View Post <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    `).join('');
+
+    bindCardEvents();
+  }
+
+  function escapeHtml(str) {
+    if (!str) return '';
+    return String(str).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+
+  function bindCardEvents() {
+    const cards = track.querySelectorAll('.whats-new-card');
+    cards.forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        cards.forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+      });
+      card.addEventListener('click', () => {
+        cards.forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+      });
+    });
+  }
+
+  if (leftBtn && rightBtn) {
+    leftBtn.addEventListener('click', () => {
+      track.scrollBy({ left: -360, behavior: 'smooth' });
+    });
+
+    rightBtn.addEventListener('click', () => {
+      track.scrollBy({ left: 360, behavior: 'smooth' });
+    });
+  }
+
+  fetchPosts();
+})();
+

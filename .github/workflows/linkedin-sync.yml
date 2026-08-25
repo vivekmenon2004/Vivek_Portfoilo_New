@@ -1,0 +1,32 @@
+name: Sync LinkedIn Posts
+
+on:
+  schedule:
+    # Runs every day at 00:00 UTC
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  sync-linkedin:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Run LinkedIn Feed Sync
+        env:
+          LINKEDIN_FEED_URL: ${{ secrets.LINKEDIN_FEED_URL }}
+        run: |
+          node scripts/update_linkedin.js
+
+      - name: Commit and Push Changes if Updated
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/data/linkedin_posts.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: auto-update LinkedIn posts & images" && git push)
