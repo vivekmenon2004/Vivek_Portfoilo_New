@@ -543,23 +543,23 @@ if (hamburger && navLinks) {
 (function initTyped() {
   const el = document.getElementById('typed-text');
   if (!el) return;
-  const words = ['Developer 💻', 'Tech Enthusiast 🚀', 'Problem Solver 🧩', 'Web Creator 🌐', 'AI Explorer 🤖', 'UI Designer 🎨'];
-  let wi = 0, ci = 0, deleting = false;
+  const words = ['Software Developer', 'UI/UX Designer', 'Data Analysis', 'Tech Enthusiast', 'Web Creator', 'Problem Solver', 'AI Explorer'];
+  let wi = 0, ci = words[0].length, deleting = true;
 
   function type() {
     const word = words[wi];
     if (!deleting) {
       el.textContent = word.slice(0, ci + 1);
       ci++;
-      if (ci === word.length) { deleting = true; setTimeout(type, 1800); return; }
+      if (ci === word.length) { deleting = true; setTimeout(type, 2000); return; }
     } else {
       el.textContent = word.slice(0, ci - 1);
       ci--;
       if (ci === 0) { deleting = false; wi = (wi + 1) % words.length; }
     }
-    setTimeout(type, deleting ? 60 : 100);
+    setTimeout(type, deleting ? 50 : 90);
   }
-  type();
+  setTimeout(type, 2200);
 })();
 
 /* ============================
@@ -573,13 +573,18 @@ if (hamburger && navLinks) {
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 })();
 
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
   contactForm.addEventListener('submit', function (e) {
+    if (!this.checkValidity()) {
+      e.preventDefault();
+      this.reportValidity();
+      return;
+    }
     const btn = document.getElementById('sendBtn');
     if (btn) {
       btn.disabled = true;
@@ -669,6 +674,80 @@ if (contactForm) {
       icon.classList.remove('fa-moon');
       icon.classList.add('fa-sun');
     }
+  });
+})();
+
+/* ============================
+   ABOUT PORTRAIT 3D TILT & GLARE
+   ============================ */
+(function initAboutPortraitTilt() {
+  const card = document.getElementById('profile-img-trigger');
+  if (!card) return;
+
+  if (window.matchMedia('(hover: none) and (pointer: coarse)').matches) return;
+
+  let rafId = null;
+  let targetRotateX = 0;
+  let targetRotateY = 0;
+  let currentRotateX = 0;
+  let currentRotateY = 0;
+
+  function updateTilt() {
+    currentRotateX += (targetRotateX - currentRotateX) * 0.12;
+    currentRotateY += (targetRotateY - currentRotateY) * 0.12;
+
+    card.style.transform = `perspective(1000px) rotateX(${currentRotateX.toFixed(2)}deg) rotateY(${currentRotateY.toFixed(2)}deg) scale3d(1.02, 1.02, 1.02)`;
+
+    if (Math.abs(targetRotateX - currentRotateX) > 0.05 || Math.abs(targetRotateY - currentRotateY) > 0.05) {
+      rafId = requestAnimationFrame(updateTilt);
+    } else {
+      rafId = null;
+    }
+  }
+
+  card.addEventListener('mousemove', (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    targetRotateX = ((centerY - y) / centerY) * 8.5;
+    targetRotateY = ((x - centerX) / centerX) * 8.5;
+
+    const glareX = (x / rect.width) * 100;
+    const glareY = (y / rect.height) * 100;
+    card.style.setProperty('--glare-x', `${glareX}%`);
+    card.style.setProperty('--glare-y', `${glareY}%`);
+
+    if (!rafId) {
+      rafId = requestAnimationFrame(updateTilt);
+    }
+  });
+
+  card.addEventListener('mouseleave', () => {
+    targetRotateX = 0;
+    targetRotateY = 0;
+
+    function resetTilt() {
+      currentRotateX += (0 - currentRotateX) * 0.15;
+      currentRotateY += (0 - currentRotateY) * 0.15;
+
+      if (Math.abs(currentRotateX) < 0.05 && Math.abs(currentRotateY) < 0.05) {
+        card.style.transform = '';
+        currentRotateX = 0;
+        currentRotateY = 0;
+      } else {
+        card.style.transform = `perspective(1000px) rotateX(${currentRotateX.toFixed(2)}deg) rotateY(${currentRotateY.toFixed(2)}deg)`;
+        requestAnimationFrame(resetTilt);
+      }
+    }
+
+    if (rafId) {
+      cancelAnimationFrame(rafId);
+      rafId = null;
+    }
+    requestAnimationFrame(resetTilt);
   });
 })();
 
@@ -793,7 +872,7 @@ if (contactForm) {
             reactions: totalReactions > 0 ? `${totalReactions} reactions` : 'LinkedIn Activity',
             reactionIcons: '👍 🚀',
             authorName: p.user_full_name || 'Vivek Menon',
-            authorAvatar: p.user_image || 'assets/images/vivek_new.jpeg',
+            authorAvatar: p.user_image || 'assets/images/vivekm.png',
             authorRole: p.user_screen_name ? `@${p.user_screen_name}` : 'MCA Student & Dept Convener',
             timestamp: p.source_created_at
           };
@@ -815,7 +894,7 @@ if (contactForm) {
           return;
         }
       }
-    } catch (e) {}
+    } catch (e) { }
 
     bindCardEvents();
   }
@@ -833,7 +912,7 @@ if (contactForm) {
         ` : ''}
         <div class="wn-card-content">
           <div class="wn-card-header">
-            <img src="${post.authorAvatar || 'assets/images/vivek_new.jpeg'}" alt="${escapeHtml(post.authorName || 'Vivek Menon')}" class="wn-avatar" onerror="this.onerror=null;this.src='assets/images/vivek_new.jpeg';" />
+            <img src="${post.authorAvatar || 'assets/images/vivekm.png'}" alt="${escapeHtml(post.authorName || 'Vivek Menon')}" class="wn-avatar" onerror="this.onerror=null;this.src='assets/images/vivekm.png';" />
             <div class="wn-author-info">
               <div class="wn-author-name">
                 <span>${escapeHtml(post.authorName || 'Vivek Menon')}</span>
@@ -891,5 +970,102 @@ if (contactForm) {
   }
 
   fetchPosts();
+})();
+
+/* ============================
+   SMOOTH STACKING SECTION CARDS
+   ============================ */
+(function initStackingEffects() {
+  const sections = [
+    { containerSelector: '.edu-grid', cardSelector: '.edu-card' },
+    { containerSelector: '.projects-grid', cardSelector: '.project-card' },
+    { containerSelector: '.timeline', cardSelector: '.timeline-item' },
+    { containerSelector: '.achievements-grid', cardSelector: '.achievement-card' }
+  ];
+
+  // Hermite smoothstep for natural organic deceleration/acceleration
+  function smoothStep(t) {
+    return t * t * (3 - 2 * t);
+  }
+
+  function getStickyTop(card, index) {
+    const computedTop = parseFloat(window.getComputedStyle(card).top);
+    if (!isNaN(computedTop) && computedTop > 0) return computedTop;
+    const cardIndex = parseFloat(card.style.getPropertyValue('--card-index')) || (index + 1);
+    return 90 + (cardIndex - 1) * 16;
+  }
+
+  function updateStacks() {
+    const windowH = window.innerHeight || document.documentElement.clientHeight;
+
+    sections.forEach(({ containerSelector, cardSelector }) => {
+      const container = document.querySelector(containerSelector);
+      if (!container) return;
+
+      const containerRect = container.getBoundingClientRect();
+      // Skip offscreen sections for performance
+      if (containerRect.bottom < -100 || containerRect.top > windowH + 100) {
+        return;
+      }
+
+      const cards = Array.from(container.querySelectorAll(cardSelector));
+      if (cards.length <= 1) return;
+
+      const cardRects = cards.map(c => c.getBoundingClientRect());
+      const stickyTops = cards.map((c, i) => getStickyTop(c, i));
+
+      for (let i = 0; i < cards.length; i++) {
+        const card = cards[i];
+        const targetEl = card.querySelector('.timeline-card') || card;
+        let totalProgress = 0;
+
+        const currTop = Math.max(stickyTops[i], cardRects[i].top);
+        const currBottom = currTop + card.offsetHeight;
+
+        for (let j = i + 1; j < cards.length; j++) {
+          const nextTop = cardRects[j].top;
+          const nextStickyTop = stickyTops[j];
+
+          const travelRange = Math.max(1, currBottom - nextStickyTop);
+          const distanceOverlapped = currBottom - nextTop;
+          const progress = Math.max(0, Math.min(1, distanceOverlapped / travelRange));
+
+          totalProgress += smoothStep(progress);
+        }
+
+        if (totalProgress > 0.001) {
+          const scale = Math.max(0.86, 1 - (totalProgress * 0.045));
+          const brightness = Math.max(0.55, 1 - (totalProgress * 0.16));
+          const opacity = Math.max(0.65, 1 - (totalProgress * 0.12));
+
+          targetEl.style.transform = `scale(${scale.toFixed(4)}) translateZ(0)`;
+          targetEl.style.filter = `brightness(${brightness.toFixed(3)})`;
+          targetEl.style.opacity = `${opacity.toFixed(3)}`;
+        } else {
+          if (targetEl.style.transform || targetEl.style.filter || (targetEl.style.opacity && targetEl.style.opacity !== '1')) {
+            targetEl.style.transform = '';
+            targetEl.style.filter = '';
+            targetEl.style.opacity = '';
+          }
+        }
+      }
+    });
+  }
+
+  let ticking = false;
+  function requestTick() {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        updateStacks();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+
+  window.addEventListener('scroll', requestTick, { passive: true });
+  window.addEventListener('resize', requestTick, { passive: true });
+  window.addEventListener('load', updateStacks);
+  setTimeout(updateStacks, 250);
 })();
 

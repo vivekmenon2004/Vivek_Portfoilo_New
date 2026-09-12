@@ -69,7 +69,7 @@ async function syncLinkedInFeed() {
         id: `linkedin-auto-${item.guid || index}`,
         title: item.title || 'LinkedIn Post',
         text: (item.description || item.content || '').replace(/<[^>]*>/g, '').trim().slice(0, 220) + '...',
-        imageUrl: imageUrl || 'assets/images/vivek_new.jpeg',
+        imageUrl: imageUrl || 'assets/images/vivekm.png',
         date: new Date(item.pubDate || Date.now()).toLocaleDateString('en-US', { month: 'short', year: 'numeric' }),
         timestamp: new Date(item.pubDate || Date.now()).toISOString().split('T')[0],
         reactions: 'LinkedIn Activity',

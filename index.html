@@ -5,9 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="Vivek Menon Menon's personal portfolio – MCA Student, Developer & Tech Enthusiast from Kerala, India." />
-  <title>Vivek Menon Menon| Portfolio</title>
-  <link rel="stylesheet" href="style.css?v=25" />
+    content="Vivek Menon's personal portfolio – MCA Student, Developer & Tech Enthusiast from Kerala, India." />
+  <title>Vivek Menon | Portfolio</title>
+  <link rel="stylesheet" href="style.css?v=33" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -38,7 +38,7 @@
         <li><a href="#about" class="nav-link" data-section="about">About Me</a></li>
         <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
         <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
-        <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+        <li><a href="#experience" class="nav-link" data-section="experience">Volunteering </a></li>
         <li><a href="#achievements" class="nav-link" data-section="achievements">Achievements</a></li>
         <li><a href="#whats-new" class="nav-link" data-section="whats-new">What's New</a></li>
         <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
@@ -56,8 +56,7 @@
     <div class="hero-content reveal">
       <h1 class="hero-name">Vivek Menon</h1>
       <div class="hero-subtitle">
-        <span class="static-text">MCA Student &nbsp;|&nbsp; </span>
-        <span class="typed-text" id="typed-text"></span>
+        <span class="typed-text" id="typed-text">Software Developer</span>
         <span class="cursor">|</span>
       </div>
       <p class="hero-desc">Building elegant solutions to complex problems. Passionate about web development, AI, and
@@ -73,8 +72,6 @@
         <a href="https://github.com/vivekmenon2004" target="_blank" title="GitHub"><i
             class="fa-brands fa-github"></i></a>
         <a href="mailto:vivekmenonv2004@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
-        <a href="https://www.instagram.com/vk__vy/" target="_blank" title="Instagram"><i
-            class="fa-brands fa-instagram"></i></a>
       </div>
     </div>
     <div class="hero-illustration reveal">
@@ -192,52 +189,78 @@
       </div>
       <div class="about-grid">
         <div class="about-image-wrap reveal">
-          <div class="id-card">
-            <!-- Shimmer sweep -->
-            <div class="id-card-shimmer"></div>
-            <!-- Avatar with glow -->
-            <div class="id-avatar-wrap">
-              <img src="assets/images/vivek_new.jpeg" alt="Vivek Menon profile photo" class="id-profile-img"
-                id="profile-img-trigger" title="Click to view profile" />
-            </div>
-            <div class="id-card-body">
-              <h3 class="id-name">Vivek Menon</h3>
-              <p class="id-role">MCA Student &amp; Developer</p>
-            </div>
-            <div class="id-card-socials">
-              <a href="https://www.linkedin.com/in/vivek-menon-/" target="_blank" class="id-social-btn"><i
-                  class="fa-brands fa-linkedin-in"></i></a>
-              <a href="https://www.instagram.com/vk__vy/" target="_blank" class="id-social-btn"><i
-                  class="fa-brands fa-instagram"></i></a>
-              <a href="mailto:vivekmenonv2004@gmail.com" class="id-social-btn"><i class="fa-solid fa-envelope"></i></a>
+          <div class="about-portrait-wrapper" id="about-card-wrapper">
+            <!-- Ambient Glow Backdrop -->
+            <div class="about-card-glow"></div>
+
+            <!-- Main Portrait Card -->
+            <div class="about-portrait-card" id="profile-img-trigger" title="Click to view full profile">
+              <!-- Shimmer Flare -->
+              <div class="about-card-glare" id="about-card-glare"></div>
+
+              <!-- Portrait Image -->
+              <img src="assets/images/vivekm.png" alt="Vivek Menon" class="about-portrait-img" loading="eager" />
+
+              <!-- Bottom Gradient Overlay -->
+              <div class="about-card-overlay">
+                <div class="about-card-content">
+                  <div class="about-card-meta">
+                    <h3 class="about-card-name">Vivek Menon</h3>
+                    <p class="about-card-role">Software Developer | UI/UX Designer</p>
+                  </div>
+                  <div class="about-card-actions">
+                    <div class="about-card-socials">
+                      <a href="https://www.linkedin.com/in/vivek-menon-/" target="_blank" class="id-social-btn"
+                        title="LinkedIn" onclick="event.stopPropagation()"><i class="fa-brands fa-linkedin-in"></i></a>
+                      <a href="https://github.com/vivekmenon2004" target="_blank" class="id-social-btn" title="GitHub"
+                        onclick="event.stopPropagation()"><i class="fa-brands fa-github"></i></a>
+                      <a href="mailto:vivekmenonv2004@gmail.com" class="id-social-btn" title="Email"
+                        onclick="event.stopPropagation()"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                    <span class="about-expand-cue" title="Expand Profile"><i
+                        class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
         <div class="about-content reveal">
-          <h3>MCA Student &amp; Passionate Developer</h3>
-          <p>I am an <strong>MCA student</strong> passionate about software development, UI design, and graphic design,
-            with a strong interest in building creative and impactful digital solutions. I enjoy transforming complex
-            ideas into clean, efficient, and visually appealing applications that provide a great user experience.</p>
-          <p>My interests include <strong>web development, artificial intelligence</strong>, and user interface design,
-            where I combine technical skills with creativity to build meaningful digital products. I believe that
-            technology should not only work well but also look intuitive and engaging for users.</p>
-          <p>I constantly challenge myself to learn new technologies, improve my design thinking, and develop innovative
-            projects. Outside of coding, I enjoy experimenting with new design concepts, exploring emerging tech trends,
-            and working on creative digital ideas that blend technology with visual storytelling.</p>
+          <h3>Software Developer &amp; UI/UX Designer</h3>
+          <p>I’m a <strong>Software Developer and UI/UX Designer</strong> passionate about turning ideas into meaningful
+            digital experiences. I enjoy creating innovative, efficient, and visually engaging solutions that combine
+            technology, creativity, and thoughtful design.</p>
+          <p>My interests span <strong>software development, UI/UX design, data analysis</strong>, and
+            <strong>artificial intelligence</strong>. I enjoy transforming complex problems and data into practical
+            solutions, while focusing on creating intuitive experiences that are simple, purposeful, and easy to use.
+          </p>
+          <p>I’m constantly exploring new technologies, strengthening my development skills, and improving my approach
+            to design and problem-solving. From building intelligent applications and analyzing data to designing
+            engaging digital experiences, I enjoy working across different areas of technology to bring ideas from
+            concept to reality.</p>
+          <p>Beyond coding and design, I enjoy experimenting with new technologies, exploring emerging trends, and
+            developing creative digital ideas that combine technology, data, and visual storytelling.</p>
           <div class="skills-wrap">
             <div class="skill-tag">Python</div>
             <div class="skill-tag">Django</div>
-            <div class="skill-tag">UI/UX</div>
-            <div class="skill-tag">ML</div>
-            <div class="skill-tag">HTML/CSS</div>
+            <div class="skill-tag">Java</div>
+            <div class="skill-tag">JavaScript</div>
             <div class="skill-tag">MySQL</div>
-            <div class="skill-tag">Git</div>
+            <div class="skill-tag">REST APIs</div>
+            <div class="skill-tag">UI/UX Design</div>
+            <div class="skill-tag">Figma</div>
+            <div class="skill-tag">Graphic Design</div>
+            <div class="skill-tag">Data Analysis</div>
+            <div class="skill-tag">Pandas</div>
+            <div class="skill-tag">NumPy</div>
+            <div class="skill-tag">Machine Learning</div>
+            <div class="skill-tag">Artificial Intelligence</div>
+            <div class="skill-tag">Git &amp; GitHub</div>
             <div class="skill-tag">AWS</div>
           </div>
-
         </div>
       </div>
-    </div>
     </div>
   </section>
 
@@ -287,41 +310,26 @@
 
         <div class="project-card reveal" style="--card-index: 1;" fs-modal-element="open">
           <div class="project-img-wrap">
-            <img src="assets/images/mediconnect.png" alt="Medileaf Screenshot" class="project-img" />
+            <img src="assets/images/MarianGrid.png" alt="Marian Excellence Grid Screenshot" class="project-img" />
             <div class="project-overlay">
-              <a href="https://github.com/vivekmenon2004/Medileaf" target="_blank" class="project-link-btn"><i
-                  class="fa-solid fa-expand"></i> View Details</a>
+              <a href="https://github.com/santhoshkannan-dev/Marian-Excellence-Grid" target="_blank"
+                class="project-link-btn"><i class="fa-solid fa-expand"></i> View Details</a>
             </div>
           </div>
           <div class="project-body">
-            <div class="project-tags"><span>Python</span><span>Django</span><span>Web</span></div>
-            <h3 class="project-title">Medileaf</h3>
-            <p class="project-desc">Medileaf is a healthcare management platform that connects patients with doctors
-              through an online appointment booking system.</p>
-            <a href="https://github.com/vivekmenon2004/Medileaf" target="_blank" class="btn btn-sm"><i
+            <div class="project-tags">
+              <span>Django</span><span>Next.js</span><span>React</span><span>TypeScript</span><span>PostgreSQL</span>
+            </div>
+            <h3 class="project-title">Marian Excellence Grid</h3>
+            <p class="project-desc">Excellence Grid is a live group project developed for Marian College Kuttikkanam to
+              streamline the evaluation, scoring, and ranking of classes across academic, co-curricular, and
+              extracurricular performance.</p>
+            <a href="https://github.com/santhoshkannan-dev/Marian-Excellence-Grid" target="_blank" class="btn btn-sm"><i
                 class="fa-solid fa-plus"></i> View More</a>
           </div>
         </div>
 
         <div class="project-card reveal" style="--card-index: 2;" fs-modal-element="open">
-          <div class="project-img-wrap">
-            <img src="assets/images/ml_predictor.png" alt="Machine Learning Models Screenshot" class="project-img" />
-            <div class="project-overlay">
-              <a href="https://github.com/vivekmenon2004/AI-Predictor-Engine" target="_blank"
-                class="project-link-btn"><i class="fa-solid fa-expand"></i> View Details</a>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-tags"><span>Python</span><span>Scikit-Learn</span><span>ML Algorithms</span></div>
-            <h3 class="project-title">Machine Learning Models</h3>
-            <p class="project-desc">This project involves implementing five algorithms to analyze
-              datasets and make predictions across classification problems.</p>
-            <a href="https://github.com/vivekmenon2004/AI-Predictor-Engine" target="_blank" class="btn btn-sm"><i
-                class="fa-solid fa-plus"></i> View More</a>
-          </div>
-        </div>
-
-        <div class="project-card reveal" style="--card-index: 3;" fs-modal-element="open">
           <div class="project-img-wrap">
             <img src="assets/images/turftime.png" alt="TurfTime Screenshot" class="project-img" />
             <div class="project-overlay">
@@ -339,6 +347,42 @@
           </div>
         </div>
 
+        <div class="project-card reveal" style="--card-index: 3;" fs-modal-element="open">
+          <div class="project-img-wrap">
+            <img src="assets/images/mediconnect.png" alt="Medileaf Screenshot" class="project-img" />
+            <div class="project-overlay">
+              <a href="https://github.com/vivekmenon2004/Medileaf" target="_blank" class="project-link-btn"><i
+                  class="fa-solid fa-expand"></i> View Details</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags"><span>Python</span><span>Django</span><span>Web</span></div>
+            <h3 class="project-title">Medileaf</h3>
+            <p class="project-desc">Medileaf is a healthcare management platform that connects patients with doctors
+              through an online appointment booking system.</p>
+            <a href="https://github.com/vivekmenon2004/Medileaf" target="_blank" class="btn btn-sm"><i
+                class="fa-solid fa-plus"></i> View More</a>
+          </div>
+        </div>
+
+        <div class="project-card reveal" style="--card-index: 4;" fs-modal-element="open">
+          <div class="project-img-wrap">
+            <img src="assets/images/ml_predictor.png" alt="Machine Learning Models Screenshot" class="project-img" />
+            <div class="project-overlay">
+              <a href="https://github.com/vivekmenon2004/AI-Predictor-Engine" target="_blank"
+                class="project-link-btn"><i class="fa-solid fa-expand"></i> View Details</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags"><span>Python</span><span>Scikit-Learn</span><span>ML Algorithms</span></div>
+            <h3 class="project-title">Machine Learning Models</h3>
+            <p class="project-desc">This project involves implementing five algorithms to analyze
+              datasets and make predictions across classification problems.</p>
+            <a href="https://github.com/vivekmenon2004/AI-Predictor-Engine" target="_blank" class="btn btn-sm"><i
+                class="fa-solid fa-plus"></i> View More</a>
+          </div>
+        </div>
+
       </div>
 
       <div class="reveal" style="text-align: center; margin-top: 60px;">
@@ -350,12 +394,12 @@
     </div>
   </section>
 
-  <!-- ===== EXPERIENCE ===== -->
+  <!-- ===== Volunteering  ===== -->
   <section id="experience" class="section section-alt">
     <div class="container">
       <div class="section-header reveal">
         <span class="section-tag">What I've Done</span>
-        <h2 class="section-title">Expe<span class="gradient-text">rience</span></h2>
+        <h2 class="section-title">Volunteering & <span class="gradient-text">Leadership</span></h2>
       </div>
       <div class="timeline">
         <div class="timeline-item reveal" style="--card-index: 1;">
@@ -471,12 +515,14 @@
             <!-- Post Card 1 (Jul 2026 - LATEST) -->
             <div class="whats-new-card glass active" tabindex="0">
               <div class="wn-media-wrap">
-                <img src="https://curator-assets.b-cdn.net/136aed72-2234-40fc-a271-e11002e9348e/393419320.jpg?width=850" alt="SET SAIL 2026" class="wn-media-img" loading="lazy" onerror="this.onerror=null;this.src='assets/images/vivek_new.jpeg';" />
+                <img src="https://curator-assets.b-cdn.net/136aed72-2234-40fc-a271-e11002e9348e/393419320.jpg?width=850"
+                  alt="SET SAIL 2026" class="wn-media-img" loading="lazy"
+                  onerror="this.onerror=null;this.src='assets/images/vivekm.png';" />
                 <div class="wn-media-badge">Jul 2026 • Latest</div>
               </div>
               <div class="wn-card-content">
                 <div class="wn-card-header">
-                  <img src="assets/images/vivek_new.jpeg" alt="Vivek Menon" class="wn-avatar" />
+                  <img src="assets/images/vivekm.png" alt="Vivek Menon" class="wn-avatar" />
                   <div class="wn-author-info">
                     <div class="wn-author-name">
                       <span>Vivek Menon</span>
@@ -487,14 +533,16 @@
                 </div>
                 <h3 class="wn-card-title">SET SAIL 2026 – A Journey of Leadership, Creativit...</h3>
                 <p class="wn-post-text">
-                  I am grateful to have served as the Technical Team Head &amp; Designer for SET SAIL 2026, the Marian UG Freshers' Induction Programme organized by the DQC Student Team.
+                  I am grateful to have served as the Technical Team Head &amp; Designer for SET SAIL 2026, the Marian
+                  UG Freshers' Induction Programme organized by the DQC Student Team.
                 </p>
                 <div class="wn-card-footer">
                   <div class="wn-stats">
                     <span class="wn-reaction-icons">👍 🚀</span>
                     <span>70 reactions • Jul 2026</span>
                   </div>
-                  <a href="https://www.linkedin.com/feed/update/urn:li:activity:7485886076478312448" target="_blank" rel="noopener noreferrer" class="wn-post-btn">
+                  <a href="https://www.linkedin.com/feed/update/urn:li:activity:7485886076478312448" target="_blank"
+                    rel="noopener noreferrer" class="wn-post-btn">
                     View Post <i class="fa-solid fa-arrow-up-right-from-square"></i>
                   </a>
                 </div>
@@ -504,12 +552,14 @@
             <!-- Post Card 2 (Jun 2026) -->
             <div class="whats-new-card glass" tabindex="0">
               <div class="wn-media-wrap">
-                <img src="https://curator-assets.b-cdn.net/136aed72-2234-40fc-a271-e11002e9348e/393419321.jpg?width=850" alt="Marian Silver Band Award" class="wn-media-img" loading="lazy" onerror="this.onerror=null;this.src='assets/images/vivek_new.jpeg';" />
+                <img src="https://curator-assets.b-cdn.net/136aed72-2234-40fc-a271-e11002e9348e/393419321.jpg?width=850"
+                  alt="Marian Silver Band Award" class="wn-media-img" loading="lazy"
+                  onerror="this.onerror=null;this.src='assets/images/vivekm.png';" />
                 <div class="wn-media-badge">Jun 2026</div>
               </div>
               <div class="wn-card-content">
                 <div class="wn-card-header">
-                  <img src="assets/images/vivek_new.jpeg" alt="Vivek Menon" class="wn-avatar" />
+                  <img src="assets/images/vivekm.png" alt="Vivek Menon" class="wn-avatar" />
                   <div class="wn-author-info">
                     <div class="wn-author-name">
                       <span>Vivek Menon</span>
@@ -520,14 +570,16 @@
                 </div>
                 <h3 class="wn-card-title">Honored to receive the Marian Silver Band Award 2025...</h3>
                 <p class="wn-post-text">
-                  Honored to receive the Marian Silver Band Award 2025–2026 for securing an A Grade (SGPA 8.62) in the Second Semester of the Master of Computer Applications (MCA) program.
+                  Honored to receive the Marian Silver Band Award 2025–2026 for securing an A Grade (SGPA 8.62) in the
+                  Second Semester of the Master of Computer Applications (MCA) program.
                 </p>
                 <div class="wn-card-footer">
                   <div class="wn-stats">
                     <span class="wn-reaction-icons">👍 🚀</span>
                     <span>49 reactions • Jun 2026</span>
                   </div>
-                  <a href="https://www.linkedin.com/feed/update/urn:li:activity:7468642557292507136" target="_blank" rel="noopener noreferrer" class="wn-post-btn">
+                  <a href="https://www.linkedin.com/feed/update/urn:li:activity:7468642557292507136" target="_blank"
+                    rel="noopener noreferrer" class="wn-post-btn">
                     View Post <i class="fa-solid fa-arrow-up-right-from-square"></i>
                   </a>
                 </div>
@@ -537,12 +589,14 @@
             <!-- Post Card 3 (May 2026) -->
             <div class="whats-new-card glass" tabindex="0">
               <div class="wn-media-wrap">
-                <img src="https://curator-assets.b-cdn.net/136aed72-2234-40fc-a271-e11002e9348e/393419322.jpg?width=850" alt="TurfTime Spotlight" class="wn-media-img" loading="lazy" onerror="this.onerror=null;this.src='assets/images/vivek_new.jpeg';" />
+                <img src="https://curator-assets.b-cdn.net/136aed72-2234-40fc-a271-e11002e9348e/393419322.jpg?width=850"
+                  alt="TurfTime Spotlight" class="wn-media-img" loading="lazy"
+                  onerror="this.onerror=null;this.src='assets/images/vivekm.png';" />
                 <div class="wn-media-badge">May 2026</div>
               </div>
               <div class="wn-card-content">
                 <div class="wn-card-header">
-                  <img src="assets/images/vivek_new.jpeg" alt="Vivek Menon" class="wn-avatar" />
+                  <img src="assets/images/vivekm.png" alt="Vivek Menon" class="wn-avatar" />
                   <div class="wn-author-info">
                     <div class="wn-author-name">
                       <span>Vivek Menon</span>
@@ -553,14 +607,16 @@
                 </div>
                 <h3 class="wn-card-title">Project Spotlight: TurfTime – Smart Turf Booking System</h3>
                 <p class="wn-post-text">
-                  Excited to showcase TurfTime, a web-based platform designed to modernize and simplify sports turf bookings.
+                  Excited to showcase TurfTime, a web-based platform designed to modernize and simplify sports turf
+                  bookings.
                 </p>
                 <div class="wn-card-footer">
                   <div class="wn-stats">
                     <span class="wn-reaction-icons">👍 🚀</span>
                     <span>32 reactions • May 2026</span>
                   </div>
-                  <a href="https://www.linkedin.com/feed/update/urn:li:activity:7455265229078429696" target="_blank" rel="noopener noreferrer" class="wn-post-btn">
+                  <a href="https://www.linkedin.com/feed/update/urn:li:activity:7455265229078429696" target="_blank"
+                    rel="noopener noreferrer" class="wn-post-btn">
                     View Post <i class="fa-solid fa-arrow-up-right-from-square"></i>
                   </a>
                 </div>
@@ -570,12 +626,14 @@
             <!-- Post Card 4 (Mar 2026) -->
             <div class="whats-new-card glass" tabindex="0">
               <div class="wn-media-wrap">
-                <img src="https://curator-assets.b-cdn.net/136aed72-2234-40fc-a271-e11002e9348e/393419323.jpg?width=850" alt="Machine Learning Journey" class="wn-media-img" loading="lazy" onerror="this.onerror=null;this.src='assets/images/vivek_new.jpeg';" />
+                <img src="https://curator-assets.b-cdn.net/136aed72-2234-40fc-a271-e11002e9348e/393419323.jpg?width=850"
+                  alt="Machine Learning Journey" class="wn-media-img" loading="lazy"
+                  onerror="this.onerror=null;this.src='assets/images/vivekm.png';" />
                 <div class="wn-media-badge">Mar 2026</div>
               </div>
               <div class="wn-card-content">
                 <div class="wn-card-header">
-                  <img src="assets/images/vivek_new.jpeg" alt="Vivek Menon" class="wn-avatar" />
+                  <img src="assets/images/vivekm.png" alt="Vivek Menon" class="wn-avatar" />
                   <div class="wn-author-info">
                     <div class="wn-author-name">
                       <span>Vivek Menon</span>
@@ -586,14 +644,16 @@
                 </div>
                 <h3 class="wn-card-title">Machine Learning Learning Journey</h3>
                 <p class="wn-post-text">
-                  As part of my MCA program, I have been exploring the fundamentals of Machine Learning and gaining hands-on experience by building and evaluating multiple machine learning models.
+                  As part of my MCA program, I have been exploring the fundamentals of Machine Learning and gaining
+                  hands-on experience by building and evaluating multiple machine learning models.
                 </p>
                 <div class="wn-card-footer">
                   <div class="wn-stats">
                     <span class="wn-reaction-icons">👍 🚀</span>
                     <span>42 reactions • Mar 2026</span>
                   </div>
-                  <a href="https://www.linkedin.com/feed/update/urn:li:activity:7440770033393438721" target="_blank" rel="noopener noreferrer" class="wn-post-btn">
+                  <a href="https://www.linkedin.com/feed/update/urn:li:activity:7440770033393438721" target="_blank"
+                    rel="noopener noreferrer" class="wn-post-btn">
                     View Post <i class="fa-solid fa-arrow-up-right-from-square"></i>
                   </a>
                 </div>
@@ -603,12 +663,14 @@
             <!-- Post Card 5 (Mar 2026) -->
             <div class="whats-new-card glass" tabindex="0">
               <div class="wn-media-wrap">
-                <img src="https://curator-assets.b-cdn.net/136aed72-2234-40fc-a271-e11002e9348e/393419324.jpg?width=850" alt="Best Class Award 2026" class="wn-media-img" loading="lazy" onerror="this.onerror=null;this.src='assets/images/vivek_new.jpeg';" />
+                <img src="https://curator-assets.b-cdn.net/136aed72-2234-40fc-a271-e11002e9348e/393419324.jpg?width=850"
+                  alt="Best Class Award 2026" class="wn-media-img" loading="lazy"
+                  onerror="this.onerror=null;this.src='assets/images/vivekm.png';" />
                 <div class="wn-media-badge">Mar 2026</div>
               </div>
               <div class="wn-card-content">
                 <div class="wn-card-header">
-                  <img src="assets/images/vivek_new.jpeg" alt="Vivek Menon" class="wn-avatar" />
+                  <img src="assets/images/vivekm.png" alt="Vivek Menon" class="wn-avatar" />
                   <div class="wn-author-info">
                     <div class="wn-author-name">
                       <span>Vivek Menon</span>
@@ -619,14 +681,16 @@
                 </div>
                 <h3 class="wn-card-title">I'm proud to share a special achievement for our MCA...</h3>
                 <p class="wn-post-text">
-                  I’m proud to share a special achievement for our MCA family! Our class has been awarded Best Class – Second Runner Up (2026), and it is truly a moment of pride for all of us.
+                  I’m proud to share a special achievement for our MCA family! Our class has been awarded Best Class –
+                  Second Runner Up (2026), and it is truly a moment of pride for all of us.
                 </p>
                 <div class="wn-card-footer">
                   <div class="wn-stats">
                     <span class="wn-reaction-icons">👍 🚀</span>
                     <span>146 reactions • Mar 2026</span>
                   </div>
-                  <a href="https://www.linkedin.com/feed/update/urn:li:activity:7436725318192852992" target="_blank" rel="noopener noreferrer" class="wn-post-btn">
+                  <a href="https://www.linkedin.com/feed/update/urn:li:activity:7436725318192852992" target="_blank"
+                    rel="noopener noreferrer" class="wn-post-btn">
                     View Post <i class="fa-solid fa-arrow-up-right-from-square"></i>
                   </a>
                 </div>
@@ -636,12 +700,14 @@
             <!-- Post Card 6 (Feb 2026) -->
             <div class="whats-new-card glass" tabindex="0">
               <div class="wn-media-wrap">
-                <img src="https://curator-assets.b-cdn.net/136aed72-2234-40fc-a271-e11002e9348e/393419325.jpg?width=850" alt="AI Tools Awareness" class="wn-media-img" loading="lazy" onerror="this.onerror=null;this.src='assets/images/vivek_new.jpeg';" />
+                <img src="https://curator-assets.b-cdn.net/136aed72-2234-40fc-a271-e11002e9348e/393419325.jpg?width=850"
+                  alt="AI Tools Awareness" class="wn-media-img" loading="lazy"
+                  onerror="this.onerror=null;this.src='assets/images/vivekm.png';" />
                 <div class="wn-media-badge">Feb 2026</div>
               </div>
               <div class="wn-card-content">
                 <div class="wn-card-header">
-                  <img src="assets/images/vivek_new.jpeg" alt="Vivek Menon" class="wn-avatar" />
+                  <img src="assets/images/vivekm.png" alt="Vivek Menon" class="wn-avatar" />
                   <div class="wn-author-info">
                     <div class="wn-author-name">
                       <span>Vivek Menon</span>
@@ -652,14 +718,16 @@
                 </div>
                 <h3 class="wn-card-title">As part of a social initiative program, I had the op...</h3>
                 <p class="wn-post-text">
-                  As part of a social initiative program, I had the opportunity to deliver a session on “AI Tools Awareness &amp; Ethical Empowerment” on 16th February 2026 at Sree Sabareesa College.
+                  As part of a social initiative program, I had the opportunity to deliver a session on “AI Tools
+                  Awareness &amp; Ethical Empowerment” on 16th February 2026 at Sree Sabareesa College.
                 </p>
                 <div class="wn-card-footer">
                   <div class="wn-stats">
                     <span class="wn-reaction-icons">👍 🚀</span>
                     <span>47 reactions • Feb 2026</span>
                   </div>
-                  <a href="https://www.linkedin.com/feed/update/urn:li:activity:7432083343674007552" target="_blank" rel="noopener noreferrer" class="wn-post-btn">
+                  <a href="https://www.linkedin.com/feed/update/urn:li:activity:7432083343674007552" target="_blank"
+                    rel="noopener noreferrer" class="wn-post-btn">
                     View Post <i class="fa-solid fa-arrow-up-right-from-square"></i>
                   </a>
                 </div>
@@ -670,7 +738,7 @@
             <div class="whats-new-card glass text-only" tabindex="0">
               <div class="wn-card-content">
                 <div class="wn-card-header">
-                  <img src="assets/images/vivek_new.jpeg" alt="Vivek Menon" class="wn-avatar" />
+                  <img src="assets/images/vivekm.png" alt="Vivek Menon" class="wn-avatar" />
                   <div class="wn-author-info">
                     <div class="wn-author-name">
                       <span>Vivek Menon</span>
@@ -682,14 +750,16 @@
                 </div>
                 <h3 class="wn-card-title">What Is Generative AI?</h3>
                 <p class="wn-post-text">
-                  Just finished the course “What Is Generative AI?” by Pinar Seyhan Demirdag! Check it out: https://lnkd.in/gjZTm5Ws #generativeai #artificialintelligence #generativeaitools.
+                  Just finished the course “What Is Generative AI?” by Pinar Seyhan Demirdag! Check it out:
+                  https://lnkd.in/gjZTm5Ws #generativeai #artificialintelligence #generativeaitools.
                 </p>
                 <div class="wn-card-footer">
                   <div class="wn-stats">
                     <span class="wn-reaction-icons">👍 🚀</span>
                     <span>22 reactions • Feb 2026</span>
                   </div>
-                  <a href="https://www.linkedin.com/feed/update/urn:li:activity:7422304929677099008" target="_blank" rel="noopener noreferrer" class="wn-post-btn">
+                  <a href="https://www.linkedin.com/feed/update/urn:li:activity:7422304929677099008" target="_blank"
+                    rel="noopener noreferrer" class="wn-post-btn">
                     View Post <i class="fa-solid fa-arrow-up-right-from-square"></i>
                   </a>
                 </div>
@@ -730,10 +800,6 @@
                 <div class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></div>
                 <div><strong>LinkedIn</strong><span>linkedin.com/in/vivek-menon-</span></div>
               </a>
-              <a href="https://www.instagram.com/vk__vy/" target="_blank" class="contact-item glass">
-                <div class="contact-icon"><i class="fa-brands fa-instagram"></i></div>
-                <div><strong>Instagram</strong><span>@vk__vy</span></div>
-              </a>
               <a href="https://github.com/vivekmenon2004" target="_blank" class="contact-item glass">
                 <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
                 <div><strong>GitHub</strong><span>github.com/vivekmenon2004</span></div>
@@ -746,19 +812,21 @@
               onload="if(window.submitted){showSuccess();}"></iframe>
 
             <form class="contact-form glass" id="contactForm"
-              action="https://docs.google.com/forms/d/e/1FAIpQLScwlJta_IOm80P8MTc_2q-GDn5yiGEIsHkrAjQitu2GESkh6Q/formResponse"
+              action="https://docs.google.com/forms/d/e/1FAIpQLSc80POF30IJZ9JyE51yU6gOZ0hYrUtKAtbglUKwWm7-6agrnw/formResponse"
               method="POST" target="hidden_iframe">
               <div class="form-group">
                 <label for="name">Your Name</label>
-                <input type="text" id="name" name="entry.1453801150" placeholder="John Doe" required />
+                <input type="text" id="name" name="entry.1797302846" placeholder="John Doe" required />
               </div>
               <div class="form-group">
                 <label for="email">Email Address</label>
-                <input type="email" id="email" name="entry.1338144488" placeholder="john@example.com" required />
+                <input type="email" id="email" name="entry.35052947" placeholder="john@example.com"
+                  pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                  title="Please enter a valid email address (e.g. john@example.com)" autocomplete="email" required />
               </div>
               <div class="form-group">
                 <label for="message">Message</label>
-                <textarea id="message" name="entry.1055435793" rows="5"
+                <textarea id="message" name="entry.1238743984" rows="5"
                   placeholder="Tell me about your project or idea..." required></textarea>
               </div>
               <button type="submit" class="btn btn-primary btn-full" id="sendBtn">
@@ -783,7 +851,6 @@
           <a href="https://www.linkedin.com/in/vivek-menon-/" target="_blank"><i
               class="fa-brands fa-linkedin-in"></i></a>
           <a href="https://github.com/vivekmenon2004" target="_blank"><i class="fa-brands fa-github"></i></a>
-          <a href="https://www.instagram.com/vk__vy/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
           <a href="mailto:vivekmenonv2004@gmail.com"><i class="fa-solid fa-envelope"></i></a>
         </div>
       </div>
@@ -816,37 +883,47 @@
     <!-- ===== PROFILE POPUP MODAL ===== -->
     <div id="profile-popup-overlay" class="profile-popup-overlay" aria-modal="true" role="dialog"
       aria-label="Vivek Menon profile card">
-      <div class="profile-popup-card glass" id="profile-popup-card">
-        <button class="profile-popup-close" id="profile-popup-close" aria-label="Close"><i
-            class="fa-solid fa-xmark"></i></button>
-        <div class="profile-popup-img-wrap">
-          <img src="assets/images/vivek_new.jpeg" alt="Vivek Menon" class="profile-popup-img" />
+      <div class="profile-popup-card" id="profile-popup-card">
+        <!-- Ambient Glow -->
+        <div class="profile-popup-glow"></div>
+
+        <!-- Close Button -->
+        <button class="profile-popup-close" id="profile-popup-close" aria-label="Close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <!-- Location Badge -->
+        <div class="profile-popup-badge">
+          <i class="fa-solid fa-location-dot"></i> Kerala, India
         </div>
-        <div class="profile-popup-body">
-          <h3 class="profile-popup-name">Vivek Menon</h3>
-          <p class="profile-popup-role">MCA Student &amp; Developer</p>
-          <p class="profile-popup-location"><i class="fa-solid fa-location-dot"></i> Kerala, India</p>
-          <div class="profile-popup-divider"></div>
-          <div class="profile-popup-socials">
-            <a href="https://www.linkedin.com/in/vivek-menon-/" target="_blank"
-              class="profile-popup-social-btn linkedin" title="LinkedIn">
-              <i class="fa-brands fa-linkedin-in"></i>
-              <span>LinkedIn</span>
-            </a>
-            <a href="https://github.com/vivekmenon2004" target="_blank" class="profile-popup-social-btn github"
-              title="GitHub">
-              <i class="fa-brands fa-github"></i>
-              <span>GitHub</span>
-            </a>
-            <a href="https://www.instagram.com/vk__vy/" target="_blank" class="profile-popup-social-btn instagram"
-              title="Instagram">
-              <i class="fa-brands fa-instagram"></i>
-              <span>Instagram</span>
-            </a>
-            <a href="mailto:vivekmenonv2004@gmail.com" class="profile-popup-social-btn email" title="Email">
-              <i class="fa-solid fa-envelope"></i>
-              <span>Email</span>
-            </a>
+
+        <!-- Portrait Image -->
+        <img src="assets/images/vivekm.png" alt="Vivek Menon" class="profile-popup-portrait-img" />
+
+        <!-- Bottom Gradient Overlay -->
+        <div class="profile-popup-overlay-content">
+          <div class="profile-popup-meta">
+            <h3 class="profile-popup-name">Vivek Menon</h3>
+            <p class="profile-popup-role">Software Developer | UI/UX Designer</p>
+          </div>
+
+          <div class="profile-popup-actions">
+            <div class="profile-popup-socials">
+              <a href="https://www.linkedin.com/in/vivek-menon-/" target="_blank"
+                class="profile-popup-social-btn linkedin" title="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://github.com/vivekmenon2004" target="_blank" class="profile-popup-social-btn github"
+                title="GitHub">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+              </a>
+              <a href="mailto:vivekmenonv2004@gmail.com" class="profile-popup-social-btn email" title="Email">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Email</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -857,7 +934,7 @@
       <i class="fa-solid fa-moon"></i>
     </button>
 
-    <script src="script.js?v=25"></script>
+    <script src="script.js?v=31"></script>
 </body>
 
 </html>
