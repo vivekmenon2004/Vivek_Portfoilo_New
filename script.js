@@ -855,54 +855,9 @@ if (contactForm) {
 
   if (!track) return;
 
-  const CURATOR_FEED_API = "https://api.curator.io/v1/feeds/136aed72-2234-40fc-a271-e11002e9348e/posts";
   const LINKEDIN_LOCAL_JSON = "assets/data/linkedin_posts.json";
 
   async function fetchPosts() {
-    // 1. Try Live Curator API Feed
-    try {
-      const res = await fetch(CURATOR_FEED_API);
-      if (!res.ok) throw new Error("Failed to fetch Curator API");
-      const json = await res.json();
-      if (json.success && Array.isArray(json.posts) && json.posts.length > 0) {
-        const formattedPosts = json.posts.map((p, idx) => {
-          const dateObj = new Date(p.source_created_at || Date.now());
-          const dateStr = dateObj.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
-
-          const fullText = (p.text || '').trim();
-          const lines = fullText.split('\n').filter(l => l.trim().length > 0 && !l.trim().startsWith('#'));
-          let title = lines[0] || 'LinkedIn Post';
-          if (title.length > 55) {
-            title = title.substring(0, 52) + '...';
-          }
-
-          const hasMedia = Boolean(p.has_media || p.has_image || p.image || p.image_large || (p.images && p.images.length > 0));
-          const imageUrl = hasMedia ? (p.image_large || p.image || (p.images && p.images[0] ? p.images[0].url : null)) : null;
-          const totalReactions = (p.likes || 0) + (p.comments || 0);
-
-          return {
-            title: title,
-            text: fullText,
-            imageUrl: imageUrl,
-            postUrl: p.url || p.user_url || 'https://www.linkedin.com/in/vivek-menon-/',
-            date: dateStr,
-            badge: idx === 0 ? `${dateStr} • Latest` : dateStr,
-            reactions: totalReactions > 0 ? `${totalReactions} reactions` : 'LinkedIn Activity',
-            reactionIcons: '👍 🚀',
-            authorName: p.user_full_name || 'Vivek Menon',
-            authorAvatar: p.user_image || 'assets/images/vivekm.png',
-            authorRole: p.user_screen_name ? `@${p.user_screen_name}` : 'MCA Student & Dept Convener',
-            timestamp: p.source_created_at
-          };
-        });
-        renderPosts(formattedPosts);
-        return;
-      }
-    } catch (err) {
-      console.warn("Live Curator feed load skipped/failed, using local fallback:", err);
-    }
-
-    // 2. Local Fallback JSON
     try {
       const res = await fetch(LINKEDIN_LOCAL_JSON);
       if (res.ok) {
@@ -912,7 +867,9 @@ if (contactForm) {
           return;
         }
       }
-    } catch (e) { }
+    } catch (e) {
+      console.warn("LinkedIn posts load notice:", e.message);
+    }
 
     bindCardEvents();
   }
