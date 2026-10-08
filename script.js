@@ -1084,3 +1084,84 @@ if (contactForm) {
   setTimeout(updateStacks, 250);
 })();
 
+/* ===================================================
+   WORDS FROM MY JOURNEY (RECOMMENDATIONS MODAL)
+   =================================================== */
+(function initRecommendationsModal() {
+  const overlay = document.getElementById('testimonial-popup-overlay');
+  const modal = document.getElementById('testimonial-modal-card');
+  const closeBtn = document.getElementById('testimonial-modal-close');
+
+  const nameEl = document.getElementById('rec-modal-name');
+  const roleEl = document.getElementById('rec-modal-role');
+  const orgEl = document.getElementById('rec-modal-org');
+  const textEl = document.getElementById('rec-modal-text');
+  const imgEl = document.getElementById('rec-modal-img');
+  const linkedinEl = document.getElementById('rec-modal-linkedin');
+
+  if (!overlay || !modal) return;
+
+  const recommendationsData = {
+    'reny-jose': {
+      img: 'assets/images/dr_reny_jose.png',
+      name: 'DR. RENY JOSE',
+      role: 'Head of the Department',
+      org: 'Marian College Kuttikkanam (Autonomous)',
+      linkedin: 'https://www.linkedin.com/in/vivek-menon-/details/recommendations/?detailScreenTabIndex=2',
+      text: `“I am pleased to recommend Vivek Menon, a sincere and proactive leader who made exceptional contributions to the PG Department of Computer Applications.
+
+As Department Student Convener and Leader of the Department Quality Circle (DQC), Vivek systematically streamlined our documentation, driving our team to secure Second Runner-Up in the PG Best Class 2026 evaluation.
+
+A talented designer and developer, he created all visual media and posters for every department event as well as MDQC student group activities. Additionally, he contributed significantly to developing the Marian Excellence Grid (MEG)—a custom software for best class evaluation.
+
+Vivek seamlessly blends technical skill, design flair, and leadership, and I am confident he will excel in all his future endeavors.”`
+    }
+  };
+
+  function openRecModal(recId) {
+    const data = recommendationsData[recId];
+    if (!data) return;
+
+    if (imgEl && data.img) imgEl.src = data.img;
+    if (nameEl) nameEl.textContent = data.name;
+    if (roleEl) roleEl.textContent = data.role;
+    if (orgEl) orgEl.textContent = data.org;
+    if (textEl) textEl.textContent = data.text;
+    if (linkedinEl) linkedinEl.href = data.linkedin;
+
+    overlay.classList.add('active');
+    overlay.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeRecModal() {
+    overlay.classList.remove('active');
+    overlay.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('[data-open-rec]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const recId = btn.getAttribute('data-open-rec');
+      openRecModal(recId);
+    });
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeRecModal);
+  }
+
+  overlay.addEventListener('click', (e) => {
+    if (!modal.contains(e.target)) {
+      closeRecModal();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && overlay.classList.contains('active')) {
+      closeRecModal();
+    }
+  });
+})();
+

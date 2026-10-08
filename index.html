@@ -124,7 +124,7 @@
   <link rel="apple-touch-icon" href="assets/images/V%20M%20Logo.png" />
 
   <!-- Stylesheets & Fonts -->
-  <link rel="stylesheet" href="style.css?v=34" />
+  <link rel="stylesheet" href="style.css?v=36" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -158,6 +158,7 @@
         <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
         <li><a href="#experience" class="nav-link" data-section="experience">Volunteering </a></li>
         <li><a href="#achievements" class="nav-link" data-section="achievements">Achievements</a></li>
+        <li><a href="#recommendations" class="nav-link" data-section="recommendations">Journey</a></li>
         <li><a href="#whats-new" class="nav-link" data-section="whats-new">What's New</a></li>
         <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
       </ul>
@@ -612,8 +613,68 @@
         </a>
       </div>
     </div>
-    <!-- ===== WHATS NEW ===== -->
-    <section id="whats-new" class="section section-alt">
+  </section>
+
+  <!-- ===== WORDS FROM MY JOURNEY (RECOMMENDATIONS) ===== -->
+  <section id="recommendations" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Endorsements &amp; Mentorship</span>
+        <h2 class="section-title">Words From <span class="gradient-text">My Journey</span></h2>
+        <p class="section-subtitle">A few thoughts from mentors, teammates, and collaborators who have been part of my journey.</p>
+      </div>
+
+      <div class="testimonials-wrapper reveal">
+        <div class="testimonials-grid" id="testimonials-grid">
+          
+          <!-- Recommendation Card: Reny Jose -->
+          <div class="testimonial-card glass" data-id="reny-jose">
+            <div class="quote-watermark"><i class="fa-solid fa-quote-right"></i></div>
+            
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">
+                <img src="assets/images/dr_reny_jose.png" alt="Dr. Reny Jose" class="author-avatar-img" />
+              </div>
+              <div class="testimonial-author">
+                <h3 class="author-name">DR. RENY JOSE</h3>
+                <p class="author-role">Head of the Department</p>
+                <p class="author-org">Marian College Kuttikkanam (Autonomous)</p>
+              </div>
+            </div>
+
+            <div class="testimonial-body">
+              <p class="testimonial-quote">
+                “I am pleased to recommend Vivek Menon, a sincere and proactive leader who made exceptional contributions to the PG Department of Computer Applications. As Department Student Convener and Leader of the Department Quality Circle (DQC), Vivek systematically streamlined our documentation, driving our team to secure Second Runner-Up in the PG Best Class 2026 evaluation. A talented designer and developer, he created all visual media and posters for every department event as well as MDQC student group activities...”
+              </p>
+            </div>
+
+            <div class="testimonial-footer">
+              <div class="testimonial-meta">
+                <span class="testimonial-date">October 8, 2026</span>
+                <a href="https://www.linkedin.com/in/vivek-menon-/details/recommendations/?detailScreenTabIndex=2" target="_blank" rel="noopener noreferrer" class="testimonial-linkedin-badge" title="View recommendation on LinkedIn">
+                  <i class="fa-brands fa-linkedin"></i> <span>LinkedIn</span>
+                </a>
+              </div>
+              <button type="button" class="testimonial-read-more-btn" data-open-rec="reny-jose" aria-label="Read full recommendation from Reny Jose">
+                Read more <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Footer Action -->
+        <div class="testimonials-footer-action">
+          <a href="https://www.linkedin.com/in/vivek-menon-/details/recommendations/?detailScreenTabIndex=2" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+            <i class="fa-brands fa-linkedin"></i> View All Recommendations on LinkedIn <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHATS NEW ===== -->
+  <section id="whats-new" class="section section-alt">
       <div class="container">
         <div class="section-header reveal">
           <span class="section-tag">LinkedIn Activity Feed</span>
@@ -1047,12 +1108,49 @@
       </div>
     </div>
 
+    <!-- ===== TESTIMONIAL / RECOMMENDATION FULL MODAL ===== -->
+    <div id="testimonial-popup-overlay" class="testimonial-modal-overlay" aria-modal="true" role="dialog"
+      aria-label="Recommendation Details">
+      <div class="testimonial-modal-card glass" id="testimonial-modal-card">
+        <!-- Close Button -->
+        <button class="testimonial-modal-close" id="testimonial-modal-close" aria-label="Close recommendation modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="testimonial-modal-header">
+          <div class="testimonial-modal-avatar">
+            <img src="assets/images/dr_reny_jose.png" alt="Dr. Reny Jose" class="modal-author-avatar-img" id="rec-modal-img" />
+          </div>
+          <div class="testimonial-modal-info">
+            <h3 id="rec-modal-name">DR. RENY JOSE</h3>
+            <p class="modal-author-role" id="rec-modal-role">Head of the Department</p>
+            <p class="modal-author-org" id="rec-modal-org">Marian College Kuttikkanam (Autonomous)</p>
+          </div>
+        </div>
+
+        <div class="testimonial-modal-divider"></div>
+
+        <div class="testimonial-modal-body">
+          <div class="modal-quote-badge"><i class="fa-solid fa-quote-left"></i></div>
+          <div class="testimonial-modal-text" id="rec-modal-text">
+            <!-- Full recommendation injected dynamically -->
+          </div>
+        </div>
+
+        <div class="testimonial-modal-footer">
+          <a id="rec-modal-linkedin" href="https://www.linkedin.com/in/vivek-menon-/details/recommendations/?detailScreenTabIndex=2" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+            <i class="fa-brands fa-linkedin"></i> View on LinkedIn <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
     <!-- Floating Theme Toggle -->
     <button id="theme-toggle" class="theme-toggle floating" aria-label="Toggle Theme">
       <i class="fa-solid fa-moon"></i>
     </button>
 
-    <script src="script.js?v=31"></script>
+    <script src="script.js?v=33"></script>
 </body>
 
 </html>
