@@ -4360,3 +4360,66 @@ body.cursor-pressed #cursor-ring {
     line-height: 1.7;
   }
 }
+
+/* ============================================================
+   ANIMATION LAYER — animations.js support styles
+   ============================================================ */
+
+/* Hero section must clip its canvas particle overlay */
+#home.hero {
+  overflow: hidden;
+}
+
+/* GPU hints for animated elements */
+.hero-name,
+.hero-illustration,
+.project-card,
+.edu-card,
+.achievement-card,
+.testimonial-card,
+.skill-tag,
+.timeline-dot {
+  will-change: transform;
+}
+
+/* Cursor ring: disable CSS transition so GSAP rAF loop handles it */
+#cursor-ring {
+  transition: none !important;
+}
+
+/* Button ripple spans must be clipped by the button */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Section draw line — lives as sibling of .section-title */
+.agy-section-line {
+  display: block;
+  pointer-events: none;
+}
+
+/* Achievement glow — make sure it can overflow slightly */
+.achievement-glow {
+  transform-origin: center center;
+}
+
+/* Timeline card — allow slight horizontal nudge */
+.timeline-card {
+  transform-origin: left center;
+}
+
+/* WN track — cursor grab hint on hover */
+#whats-new-track {
+  cursor: grab;
+  user-select: none;
+}
+
+#whats-new-track:active {
+  cursor: grabbing;
+}
+
+/* Skill tag — avoid layout shift from float loop */
+.skills-wrap {
+  align-items: flex-start;
+}

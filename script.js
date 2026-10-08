@@ -857,6 +857,84 @@ if (contactForm) {
 
   const LINKEDIN_LOCAL_JSON = "assets/data/linkedin_posts.json";
 
+  const fallbackPosts = [
+    {
+      "id": "7511385542631030786",
+      "title": "We’re live! The Excellence Grid is officially out in testing...",
+      "text": "We’re live! The Excellence Grid is officially out in testing — exclusively for Marian College students.\n\nI’m thrilled to share a major project our team has been building! A huge shoutout to my incredible teammates.",
+      "imageUrl": "assets/images/MarianGrid.png",
+      "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7511385542631030786",
+      "date": "Oct 2026",
+      "badge": "Oct 2026 • Latest",
+      "reactions": "35 reactions",
+      "reactionIcons": "👍 🚀",
+      "authorName": "Vivek Menon",
+      "authorAvatar": "assets/images/vivekm.png",
+      "authorRole": "@vivek-menon-",
+      "timestamp": "2026-10-01T11:24:28.000Z"
+    },
+    {
+      "id": "7505936336890253312",
+      "title": "IT'S LIVE 🔗 vivekmenon.online",
+      "text": "IT'S LIVE 🔗 http://vivekmenon.online/\n\nAfter putting together ideas, designs, code, and countless iterations, I’m excited to finally reveal my personal portfolio: http://vivekmenon.online/",
+      "imageUrl": "assets/images/linkedin/post_7505936336890253312.jpg",
+      "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7505936336890253312",
+      "date": "Sep 2026",
+      "badge": "Sep 2026",
+      "reactions": "36 reactions",
+      "reactionIcons": "👍 🚀",
+      "authorName": "Vivek Menon",
+      "authorAvatar": "assets/images/vivekm.png",
+      "authorRole": "@vivek-menon-",
+      "timestamp": "2026-09-16T10:31:16.000Z"
+    },
+    {
+      "id": "7498968700079820800",
+      "title": "Bidirectional Smart Visitor Counter (IoT)",
+      "text": "Presenting the Bidirectional Smart Visitor Counter — a complete IoT solution designed for automated visitor tracking and real-time occupancy monitoring.",
+      "imageUrl": "assets/images/linkedin/post_7498968700079820800.jpg",
+      "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498968700079820800",
+      "date": "Aug 2026",
+      "badge": "Aug 2026",
+      "reactions": "27 reactions",
+      "reactionIcons": "👍 🚀",
+      "authorName": "Vivek Menon",
+      "authorAvatar": "assets/images/vivekm.png",
+      "authorRole": "@vivek-menon-",
+      "timestamp": "2026-08-28T05:04:22.000Z"
+    },
+    {
+      "id": "7485886076478312448",
+      "title": "SET SAIL 2026 – Leadership, Creativity & Collaboration",
+      "text": "I am grateful to have served as the Technical Team Head & Designer for SET SAIL 2026, the Marian UG Freshers' Induction Programme organized by the DQC Student Team.",
+      "imageUrl": "assets/images/linkedin/post_7485886076478312448.jpg",
+      "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7485886076478312448",
+      "date": "Jul 2026",
+      "badge": "Jul 2026",
+      "reactions": "73 reactions",
+      "reactionIcons": "👍 🚀",
+      "authorName": "Vivek Menon",
+      "authorAvatar": "assets/images/vivekm.png",
+      "authorRole": "@vivek-menon-",
+      "timestamp": "2026-07-23T02:38:41.000Z"
+    },
+    {
+      "id": "7468642557292507136",
+      "title": "Marian Silver Band Award 2025–2026",
+      "text": "Honored to receive the Marian Silver Band Award 2025–2026 for securing an A Grade (SGPA 8.62) in the Second Semester of the Master of Computer Applications (MCA) program.",
+      "imageUrl": "assets/images/linkedin/post_393419321.jpg",
+      "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7468642557292507136",
+      "date": "Jun 2026",
+      "badge": "Jun 2026",
+      "reactions": "51 reactions",
+      "reactionIcons": "👍 🚀",
+      "authorName": "Vivek Menon",
+      "authorAvatar": "assets/images/vivekm.png",
+      "authorRole": "@vivek-menon-",
+      "timestamp": "2026-06-05T12:39:06.000Z"
+    }
+  ];
+
   async function fetchPosts() {
     try {
       const res = await fetch(LINKEDIN_LOCAL_JSON);
@@ -868,10 +946,10 @@ if (contactForm) {
         }
       }
     } catch (e) {
-      console.warn("LinkedIn posts load notice:", e.message);
+      console.warn("LinkedIn posts load notice (fallback active):", e.message);
     }
 
-    bindCardEvents();
+    renderPosts(fallbackPosts);
   }
 
   function renderPosts(posts) {
