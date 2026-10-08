@@ -531,6 +531,9 @@ if (hamburger && navLinks) {
     links.forEach(link => {
       if (link.dataset.section === id) {
         link.classList.add('active');
+        if (window.innerWidth <= 900) {
+          link.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
       } else {
         link.classList.remove('active');
       }
