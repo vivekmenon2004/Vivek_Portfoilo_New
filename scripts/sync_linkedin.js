@@ -138,7 +138,7 @@ async function syncAllPosts() {
     formattedPosts.push({
       id: postId,
       title: title,
-      text: cleanContent.slice(0, 220) + (cleanContent.length > 220 ? '...' : ''),
+      text: cleanContent,
       imageUrl: localImg,
       postUrl: postUrl,
       date: dateStr,
