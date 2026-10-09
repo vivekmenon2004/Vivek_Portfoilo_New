@@ -2,8 +2,8 @@
   {
     "id": "7511385542631030786",
     "title": "We’re live! The Excellence Grid is officially out in test...",
-    "text": "We’re live! The Excellence Grid is officially out in testing — exclusively for Marian College students.\n\n​I’m thrilled to share a major project our team has been building! A huge shoutout to my incredible teammates — SANTHOSH KANNAN, Vivek Menon, Bibin Joseph, and Adhil Shajahan. Their hard work, late nights, and dedication over the past few weeks made this milestone possible.\n\n​We extend our sincere gratitude to the all faculty members of PG Department of Computer Applications Marian College Kuttikkanam Autonomous, also Dr. Prijil Mathew and Dr Juby George, the faculty in-charges for Best Class Evaluation, for their valuable guidance and mentorship throughout this project.\n\nAfter rigorous testing and refining, the site is up, fully operational, and ready for you to explore.\n\n​Our goal with Excellence Grid is to create a seamless, reliable platform, and this test phase is the final step toward our full release.\n\n​What you can do right now:\n\n​Visit https://lnkd.in/gQEVXYPY\n\n​Test out the features\n\n​Leave us your feedback or suggestions\n\n​Check it out and let us know what you think in the comments! 👇\n\n\n\n#mariancollegekuttikanam #marian #bestclass #evaluation",
-    "imageUrl": "assets/images/MarianGrid.png",
+    "text": "We’re live! The Excellence Grid is officially out in testing — exclusively for Marian College students.\n\n​I’m thrilled to share a major project our team has been building! A huge shoutout to my incredible teammates — SAN...",
+    "imageUrl": "assets/images/linkedin/post_7511385542631030786.jpg",
     "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7511385542631030786",
     "date": "Oct 2026",
     "badge": "Oct 2026 • Latest",
@@ -17,7 +17,7 @@
   {
     "id": "7505936336890253312",
     "title": "IT'S LIVE  🔗http://vivekmenon.online/",
-    "text": "IT'S LIVE  🔗http://vivekmenon.online/\n\n\n\nAfter putting together ideas, designs, code, and countless iterations, I’m excited to finally reveal my personal portfolio: http://vivekmenon.online/\n\n\n\nBuilt with a focus on clean design, meaningful interactions, and modern web experiences, the portfolio reflects my approach to creating digital solutions that are both functional and visually engaging.\n\n\n\nMy key areas of interest include:\n\n\n\nWeb Development\n\nUI/UX & Graphic Design\n\nArtificial Intelligence & Machine Learning\n\nData Analytics\n\n\n\nI enjoy turning ideas into practical digital solutions while combining clean code, thoughtful design, and problem-solving.\n\n\n\nThis portfolio is more than just a website — it represents my continuous journey of learning, building, experimenting, and creating.\n\n\n\nI’m always open to learning, collaborating, and connecting with people in the tech and design community.\n\n\n\n🔗 Explore my portfolio: http://vivekmenon.online/\n\n\n\nI’d genuinely appreciate your feedback and suggestions.\n\n\n\n#SoftwareDeveloper #MCA #Portfolio #WebDevelopment #UIDesign #UXDesign #ArtificialIntelligence #MachineLearning #DataAnalytics #SoftwareEngineering #Tech #Design #DeveloperJourney #PersonalPortfolio",
+    "text": "IT'S LIVE  🔗http://vivekmenon.online/\n\n\n\nAfter putting together ideas, designs, code, and countless iterations, I’m excited to finally reveal my personal portfolio: http://vivekmenon.online/\n\n\n\nBuilt with a focus on cle...",
     "imageUrl": "assets/images/linkedin/post_7505936336890253312.jpg",
     "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7505936336890253312",
     "date": "Sep 2026",
@@ -32,7 +32,7 @@
   {
     "id": "7498968700079820800",
     "title": "Presenting the Bidirectional Smart Visitor Counter — a co...",
-    "text": "Presenting the Bidirectional Smart Visitor Counter — a complete IoT solution designed for automated visitor tracking and real-time occupancy monitoring.\n\n\n\nThe project was designed to address a simple but practical challenge: accurately tracking how many people enter, exit, and are currently inside a facility without relying on manual counting.\n\n\n\nThe system uses two IR sensors interfaced with a NodeMCU ESP8266 to detect the direction of movement.\n\n\n\nBy analyzing the sequence in which the sensors are triggered, the system identifies whether a person is entering or exiting and updates the count accordingly.\n\n\n\nThe NodeMCU processes the sensor data and provides it through a Wi-Fi-enabled REST API using JSON. A custom-built web dashboard consumes this API and presents the information through a clean, interactive interface.\n\n\n\nTechnology Stack\n\n\n\nHardware: NodeMCU ESP8266 | IR Sensors | Breadboard\n\nEmbedded:Arduino IDE | C/C++\n\nCommunication:Wi-Fi | HTTP | REST API | JSON\n\nWeb:HTML | CSS | JavaScript\n\n\n\nWhat makes this project particularly valuable to me is that it goes beyond a basic hardware prototype. It demonstrates a complete IoT data pipeline\n\n\n\nSensor → ESP8266 → Data Processing → Wi-Fi → REST API → Web Dashboard → Real-Time Visualization\n\n\n\nBuilding this system provided valuable hands-on experience in embedded programming, sensor interfacing, IoT communication, API development, frontend integration, and real-time data visualization.\n\n\n\nThis project has strengthened my understanding of how hardware and software can work together to build practical, connected solutions.\n\n\n\n#IoT #InternetOfThings #ESP8266 #NodeMCU #EmbeddedSystems #Arduino #IoTDevelopment #RESTAPI #WebDevelopment #JavaScript #RealTimeMonitoring #SmartBuilding #Automation #SoftwareDevelopment #FullStackDevelopment #MCA #StudentDeveloper #ProjectShowcase #TechProject #EngineeringProject #UiDesigning",
+    "text": "Presenting the Bidirectional Smart Visitor Counter — a complete IoT solution designed for automated visitor tracking and real-time occupancy monitoring.\n\n\n\nThe project was designed to address a simple but practical chall...",
     "imageUrl": "assets/images/linkedin/post_7498968700079820800.jpg",
     "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498968700079820800",
     "date": "Aug 2026",
@@ -47,7 +47,7 @@
   {
     "id": "7485886076478312448",
     "title": "⛵ SET SAIL 2026 – A Journey of Leadership, Creativity & C...",
-    "text": "⛵ SET SAIL 2026 – A Journey of Leadership, Creativity & Collaboration\n\n\n\nI am grateful to have served as the Technical Team Head & Designer for SET SAIL 2026, the Marian UG Freshers' Induction Programme organized by the DQC Student Team.\n\n\n\nThe success of SET SAIL 2026 was truly a team effort. I sincerely appreciate our Program Heads for their leadership, dedication, and thoughtful coordination, which ensured the smooth execution of every session. Working with such a committed team was a valuable learning experience.\n\n\n\nThis experience gave me the opportunity to contribute both creatively and technically while working alongside an inspiring team. As the Technical Team Head, I was responsible for leading the technical operations and designing the complete visual identity of the programme, including event branding, posters, banners, ID cards, bookmarks, presentation templates, stage visuals, and digital creatives, along with coordinating presentation systems, audio, photography, videography, reel production, and overall multimedia support.\n\n\n\nMy heartfelt thanks go to every member of the Technical Team whose commitment, creativity, and teamwork played a crucial role in the success of the programme. From managing presentations, audio, photography, videography, reel editing, and multimedia support to handling every technical requirement behind the scenes, the team ensured that each session was executed smoothly and professionally throughout the three-day programme.\n\n\n\nI would also like to express my sincere gratitude to our Faculty Coordinator, Albin Kurian for his continuous guidance, encouragement, and trust. His support motivated us to give our best and carry out our responsibilities with confidence.\n\n\n\nSET SAIL 2026 was more than an induction programme—it was a wonderful opportunity to learn, collaborate, lead, and grow together. I am thankful to everyone who made this journey memorable and look forward to many more opportunities to create meaningful experiences together.\n\n\n\n⛵ Every great event is the result of teamwork, dedication, and countless efforts behind the scenes. Proud to have been part of this journey.\n\n\n\nDr Joby Cyriac Jasmine John Alen Kuriakose\n\n\n\n#SETSAIL2026 #MarianCollege #TechnicalTeam #TechnicalLead #GraphicDesign #CreativeDesign #EventManagement #Leadership #Teamwork #StudentLeadership #IQAC #MAGIS #MCA #LinkedIn #BehindTheScenes #Freshers2026",
+    "text": "⛵ SET SAIL 2026 – A Journey of Leadership, Creativity & Collaboration\n\n\n\nI am grateful to have served as the Technical Team Head & Designer for SET SAIL 2026, the Marian UG Freshers' Induction Programme organized by the ...",
     "imageUrl": "assets/images/linkedin/post_7485886076478312448.jpg",
     "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7485886076478312448",
     "date": "Jul 2026",
@@ -62,8 +62,8 @@
   {
     "id": "7468642557292507136",
     "title": "Honored to receive the Marian Silver Band Award 2025–2026...",
-    "text": "Honored to receive the Marian Silver Band Award 2025–2026 for securing an A Grade (SGPA 8.62) in the Second Semester of the Master of Computer Applications (MCA) program at Marian College Kuttikkanam Autonomous.\n\n\n\nThis achievement motivates me to continue strengthening my skills in software development, problem-solving, and emerging technologies while striving for greater academic and professional excellence.\n\n\n\n#MCA #SoftwareEngineering #PythonDeveloper #DjangoDeveloper #WebDevelopment #Programming #Coding #SoftwareDevelopment #ComputerScience #TechCareer #StudentAchievement #AcademicExcellence #MarianCollege",
-    "imageUrl": "assets/images/linkedin/post_393419321.jpg",
+    "text": "Honored to receive the Marian Silver Band Award 2025–2026 for securing an A Grade (SGPA 8.62) in the Second Semester of the Master of Computer Applications (MCA) program at Marian College Kuttikkanam Autonomous.\n\n\n\nThis ...",
+    "imageUrl": "assets/images/linkedin/post_7468642557292507136.jpg",
     "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7468642557292507136",
     "date": "Jun 2026",
     "badge": "Jun 2026",
@@ -77,8 +77,8 @@
   {
     "id": "7455265229078429696",
     "title": "Project Spotlight: TurfTime – Smart Turf Booking System",
-    "text": "Project Spotlight: TurfTime – Smart Turf Booking System\n\n\n\nExcited to showcase TurfTime, a web-based platform designed to modernize and simplify sports turf bookings.\n\n\n\nMany turf facilities still rely on phone calls and WhatsApp messages for reservations, often resulting in scheduling conflicts, missed bookings, and inefficient management. TurfTime addresses these challenges through a centralized and user-friendly digital solution.\n\n\n\nKey Features\n\n\n\n• Real-time turf availability tracking\n\n\n\n• Instant slot booking and secure payment integration\n\n\n\n• Dynamic pricing based on peak and non-peak hours\n\n\n\n• Dedicated dashboards for players and turf owners\n\n\n\n• Automated booking management and schedule updates\n\n\n\nTechnologies & Skills Applied\n\n\n\n• Python\n\n\n\n• Django\n\n\n\n• Web Development\n\n\n\n• Database Management\n\n\n\n• User Authentication & Authorization\n\n\n\n• Payment Gateway Integration\n\n\n\n• Responsive UI/UX Design\n\n\n\nThis project strengthened my experience in full-stack development, system design, database optimization, and building scalable web applications that solve real-world problems.\n\n\n\nI am actively exploring opportunities as a Software Engineer, Python Developer, Django Developer, or Full-Stack Developer, where I can contribute to impactful products and continue growing as a developer.\n\n\n\n#OpenToWork #SoftwareEngineer #PythonDeveloper #DjangoDeveloper #FullStackDeveloper #BackendDeveloper #WebDevelopment #SoftwareDevelopment #Python #Django #ProjectShowcase #TechProjects #DatabaseManagement #ProblemSolving #Innovation #MCA #StudentDeveloper #LinkedInIndia",
-    "imageUrl": "assets/images/linkedin/post_393419322.jpg",
+    "text": "Project Spotlight: TurfTime – Smart Turf Booking System\n\n\n\nExcited to showcase TurfTime, a web-based platform designed to modernize and simplify sports turf bookings.\n\n\n\nMany turf facilities still rely on phone calls and...",
+    "imageUrl": "assets/images/linkedin/post_7455265229078429696.jpg",
     "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7455265229078429696",
     "date": "Apr 2026",
     "badge": "Apr 2026",
@@ -92,8 +92,8 @@
   {
     "id": "7440770033393438721",
     "title": "Machine Learning Learning Journey",
-    "text": "Machine Learning Learning Journey\n\n\n\nAs part of my MCA program, I have been exploring the fundamentals of Machine Learning and gaining hands-on experience by building and evaluating multiple machine learning models using real-world datasets.\n\n\n\nModels Implemented\n\n\n\nSimple Linear Regression\n\n\n\nDeveloped a model to predict mobile data usage based on daily usage hours and analyzed the relationship between user behavior and data consumption.\n\n\n\nMultiple Linear Regression\n\n\n\nBuilt a model to predict smartphone prices using multiple features such as RAM, storage, battery capacity, screen size, processor speed, camera specifications, and brand information.\n\n\n\nPolynomial Regression\n\n\n\nImplemented a model to capture non-linear relationships and predict sales performance based on advertising expenditure.\n\n\n\nK-Nearest Neighbors (KNN)\n\n\n\nCreated a classification model to predict whether a user is likely to purchase a mobile device based on factors such as age, salary, and spending behavior.\n\n\n\nLogistic Regression\n\n\n\nDeveloped a classification model to predict laptop purchase decisions using features including price, RAM, storage, processor performance, battery capacity, and other hardware specifications.\n\n\n\nKey Learning Outcomes\n\n\n\n• Data preprocessing and cleaning\n\n\n\n• Feature engineering and data transformation\n\n\n\n• Encoding categorical variables\n\n\n\n• Regression and classification techniques\n\n\n\n• Feature scaling and normalization\n\n\n\n• Model training, testing, and evaluation\n\n\n\n• Understanding algorithm selection for different business problems\n\n\n\nProject Experience\n\n\n\nTo strengthen my practical understanding, I integrated these algorithms into a mini machine learning project where each model was applied to solve a specific real-world prediction problem. This helped me gain valuable experience in dataset analysis, model selection, performance evaluation, and machine learning workflows.\n\n\n\nThis journey has strengthened my interest in Machine Learning, Data Science, Python Development, and AI-driven solutions. I look forward to applying these skills to real-world projects and continuously expanding my knowledge in the field.\n\n\n\n#OpenToWork #MachineLearning #ArtificialIntelligence #DataScience #PythonDeveloper #SoftwareEngineer #MachineLearningEngineer #AI #Python #DataAnalytics #PredictiveModeling #MCA #ComputerScience #StudentDeveloper #TechProjects #LearningJourney #FutureReady",
-    "imageUrl": "assets/images/linkedin/post_393419323.jpg",
+    "text": "Machine Learning Learning Journey\n\n\n\nAs part of my MCA program, I have been exploring the fundamentals of Machine Learning and gaining hands-on experience by building and evaluating multiple machine learning models using...",
+    "imageUrl": "assets/images/linkedin/post_7440770033393438721.jpg",
     "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7440770033393438721",
     "date": "Mar 2026",
     "badge": "Mar 2026",
@@ -107,8 +107,8 @@
   {
     "id": "7436725318192852992",
     "title": "I’m proud to share a special achievement for our MCA fami...",
-    "text": "I’m proud to share a special achievement for our MCA family! 🎉\n\n\n\nOur class has been awarded Best Class – Second Runner Up (2026), and it is truly a moment of pride for all of us.\n\n\n\nAnn Mary and I had the opportunity to serve as the DQC Coordinators of our class. Along with this, I also had the responsibility of representing the Department Students Convener of the PG Department of Computer Application. Through these roles, we focused on maintaining timely documentation, continuous program updates, and well-organized reports throughout the academic year.\n\n\n\nThis achievement would not have been possible without the constant guidance and support of our respected faculty members — Robins Kattoor, Satheesh Kumar S, Reny Jose, Dr. Mendus Jacob, Win Mathew John, Kochumol Abraham and ITALIA JOSEPH MARIA. Their continuous monitoring and encouragement played a vital role in this success.\n\n\n\nA special mention to Annie Joben, Athulya M Nair, Gouri Nandhan P V, Renjitha V R, Riya Boban, and Santhosh Kannan for their valuable contribution during the data cleaning process, which ensured accurate and well-maintained documentation.\n\n\n\nMost importantly, this recognition belongs to our entire class for their incredible coordination, teamwork, and collective effort.\n\n\n\nTogether, we proved that consistency and collaboration lead to excellence. 🚀\n\n\n\n#BestClass #MCA #Leadership #Teamwork #StudentCouncil #Achievement #ComputerApplications",
-    "imageUrl": "assets/images/linkedin/post_393419324.jpg",
+    "text": "I’m proud to share a special achievement for our MCA family! 🎉\n\n\n\nOur class has been awarded Best Class – Second Runner Up (2026), and it is truly a moment of pride for all of us.\n\n\n\nAnn Mary and I had the opportunity t...",
+    "imageUrl": "assets/images/linkedin/post_7436725318192852992.jpg",
     "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7436725318192852992",
     "date": "Mar 2026",
     "badge": "Mar 2026",
@@ -122,8 +122,8 @@
   {
     "id": "7432083343674007552",
     "title": "As part of a social initiative program, I had the opportu...",
-    "text": "As part of a social initiative program, I had the opportunity to deliver a session on “AI Tools Awareness & Ethical Empowerment” on 16th February 2026 at Sree Sabareesa College, Murukkumvayal, Mundakkayam.\n\n\n\nThe session was conducted for BCA first-year and final-year students, focusing on how Artificial Intelligence is transforming the way we design, develop, and think.\n\n\n\n- What Was Explored:\n\n\n\n• Figma – Designing modern UI/UX interfaces collaboratively\n\n• STICK AI – Simplifying visual ideation and creative workflows\n\n• Cursor – AI-powered coding assistant for smarter development\n\n• Antigravity – Enhancing productivity and creative automation\n\n\n\nBeyond just tools, the core focus was on:\n\n\n\n• Understanding the responsible use of AI\n\n\n\n• Ethical decision-making in technology\n\n\n\n• Leveraging AI for learning, innovation, and career growth\n\n\n\n• Building future-ready skills as BCA students\n\n\n\n\n\nIt was inspiring to interact with such enthusiastic learners who are eager to explore emerging technologies. The curiosity, questions, and participation from both first and final-year students made the session highly engaging and impactful.\n\n\n\nGrateful for the opportunity to contribute to the academic and professional growth of young tech minds.",
-    "imageUrl": "assets/images/linkedin/post_393419325.jpg",
+    "text": "As part of a social initiative program, I had the opportunity to deliver a session on “AI Tools Awareness & Ethical Empowerment” on 16th February 2026 at Sree Sabareesa College, Murukkumvayal, Mundakkayam.\n\n\n\nThe session...",
+    "imageUrl": "assets/images/linkedin/post_7432083343674007552.jpg",
     "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7432083343674007552",
     "date": "Feb 2026",
     "badge": "Feb 2026",
@@ -138,7 +138,7 @@
     "id": "7422304929677099008",
     "title": "Just finished the course “What Is Generative AI?” by Pina...",
     "text": "Just finished the course “What Is Generative AI?” by Pinar Seyhan Demirdag! Check it out: https://lnkd.in/gjZTm5Ws #generativeai #artificialintelligence #generativeaitools.",
-    "imageUrl": null,
+    "imageUrl": "assets/images/linkedin/post_7422304929677099008.jpg",
     "postUrl": "https://www.linkedin.com/learning/certificates/dd147db513af3aa0e06d1348d8d5bfdf897400f65ab9641e4514dc8ed5b89417",
     "date": "Jan 2026",
     "badge": "Jan 2026",
@@ -150,24 +150,9 @@
     "timestamp": "2026-01-28T15:49:54.000Z"
   },
   {
-    "id": "7381313375148044288",
-    "title": "𝗡𝗼 𝗖𝗹𝗲𝗮𝗿 𝗣𝗹𝗮𝗻, 𝗝𝘂𝘀𝘁 𝗮 𝗟𝗼𝘁 𝗼𝗳 𝗖𝘂𝗿\ud835...",
-    "text": "𝗡𝗼 𝗖𝗹𝗲𝗮𝗿 𝗣𝗹𝗮𝗻, 𝗝𝘂𝘀𝘁 𝗮 𝗟𝗼𝘁 𝗼𝗳 𝗖𝘂𝗿𝗶𝗼𝘀𝗶𝘁𝘆.\n\n\n\n\n\n\n\n \n\n\"𝑳𝒆𝒕'𝒔 𝒋𝒖𝒔𝒕 𝒈𝒐 𝒂𝒏𝒅 𝒔𝒆𝒆 𝒘𝒉𝒂𝒕 𝒉𝒂𝒑𝒑𝒆𝒏𝒔...\"\n\n\n\n\n\n𝗧𝗵𝗮𝘁 𝘄𝗮𝘀 𝘁𝗵𝗲 𝗺𝗼𝘁𝘁𝗼 𝗳𝗼𝗿 𝗼𝘂𝗿 𝘁𝗲𝗮𝗺 of three as we joined the NASA Space Apps Challenge. We were 𝗻𝗲𝘄 𝘁𝗼 𝗵𝗮𝗰𝗸𝗮𝘁𝗵𝗼𝗻𝘀, curious to learn, and excited to see how innovation works....\n\n\n\n\n\nWhat we experienced:\n\n𝟯𝟲 𝗵𝗼𝘂𝗿𝘀 𝗼𝗳 𝗹𝗲𝗮𝗿𝗻𝗶𝗻𝗴 – Fast, challenging, and fun.\n\n𝗧𝗲𝗮𝗺𝘄𝗼𝗿𝗸 𝗺𝗮𝘁𝘁𝗲𝗿𝘀 – learned how to communicate and work together.\n\n𝗧𝗿𝘆𝗶𝗻𝗴 𝘀𝗼𝗺𝗲𝘁𝗵𝗶𝗻𝗴 𝗻𝗲𝘄 – Even with little knowledge, we managed to build something as a team.\n\n\n\nOur main takeaways:\n\n--Teamwork is as important as skills.\n\n--There is always 𝗠𝗼𝗿𝗲 𝘁𝗼 𝗹𝗲𝗮𝗿𝗻\n\n--Building something real feels amazing.\n\n\n\n\n\nThis experience inspired us to keep learning, building, and collaborating....\n\n\n\nVivek Menon \n\n#SpaceApps #NASA #Hackathon #Teamwork #Learning #Curiosity",
-    "imageUrl": "assets/images/linkedin/post_7381313375148044288.jpg",
-    "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7381313375148044288",
-    "date": "Oct 2025",
-    "badge": "Oct 2025",
-    "reactions": "75 reactions",
-    "reactionIcons": "👍 🚀",
-    "authorName": "Vivek Menon",
-    "authorAvatar": "assets/images/vivekm.png",
-    "authorRole": "@vivek-menon-",
-    "timestamp": "2025-10-07T13:04:06.000Z"
-  },
-  {
     "id": "7334621828776165378",
     "title": "I'm excited to share that I've successfully completed AWS...",
-    "text": "I'm excited to share that I've successfully completed AWS Course by Scaler after completing an in-depth tutorial on Amazon Web Services (AWS).\n\n\n\nGained insights into essential AWS services and cloud fundamentals that are crucial for today's tech landscape. The hands-on approach and real-world examples helped me develop a strong foundation in cloud infrastructure and its practical applications. These skills are highly relevant in today's technology-driven world, and I'm looking forward to applying them in my future roles-especially in areas like cloud computing, data analytics, and scalable solution design. This marks an important step in my ongoing learning journey\n\n\n\nand career development in the tech space.\n\n\n\n#AWS #CloudComputing #AmazonWebServices #Scaler",
+    "text": "I'm excited to share that I've successfully completed AWS Course by Scaler after completing an in-depth tutorial on Amazon Web Services (AWS).\n\n\n\nGained insights into essential AWS services and cloud fundamentals that ar...",
     "imageUrl": "assets/images/linkedin/post_7334621828776165378.jpg",
     "postUrl": "https://moonshot.scaler.com/s/li/PaKlhNSlGo",
     "date": "May 2025",
@@ -197,7 +182,7 @@
   {
     "id": "7334490316428759041",
     "title": "I just completed Deloitte Australia's Data Analytics on F...",
-    "text": "I just completed Deloitte Australia's Data Analytics on Forage  In the simulation I\n\n\n\n * Completed a Deloitte job simulation involving data analysis and forensic\n\n   technology \n\n * Created a data dashboard using Tableau \n\n * Used Excel to classify data and draw business conclusions",
+    "text": "I just completed Deloitte Australia's Data Analytics on Forage  In the simulation I\n\n\n\n * Completed a Deloitte job simulation involving data analysis and forensic\n\n   technology \n\n * Created a data dashboard using Tablea...",
     "imageUrl": null,
     "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7334490316428759041",
     "date": "May 2025",
@@ -210,24 +195,9 @@
     "timestamp": "2025-05-31T08:05:59.000Z"
   },
   {
-    "id": "7295121217915695104",
-    "title": "🚀 1st Runner-Up at IIT Bombay’s NEC! A Journey of 6 Mont...",
-    "text": "🚀 1st Runner-Up at IIT Bombay’s NEC! A Journey of 6 Months, Countless Challenges, and Unforgettable Growth! 🏆\n\n\n\nWhat a journey it has been! Over the past 6 months, our team has given it everything—late-night brainstorming, strategic planning, and tireless execution—to secure the 1st Runner-Up position at IIT Bombay’s National Entrepreneurship Challenge (NEC), held alongside E-Summit 2025!  \n\n\n\nThis achievement wouldn’t have been possible without the incredible efforts of each and every member of our team.\n\nCyriac Jayesh,Anand S Bosco,Adonia Cyrus,Dennis v Tom,Vivek Menon,Asni Ansari Fathima,Abijith Sunny,Jeeva Jayan Varghese and Alwin Mathew Sibi  —your dedication, creativity, and resilience have been the driving force behind this success. From navigating challenges to coming up with groundbreaking ideas, we proved that teamwork truly makes the dream work!  \n\n\n\nA heartfelt thank you to IIT Bombay, our mentors, and everyone who supported us throughout this journey. This experience has shaped us, strengthened us, and ignited our passion for entrepreneurship even more.  \n\n\n\nThis is just the beginning—greater challenges and bigger milestones ahead! 🚀✨  \n\n\n\n#NEC #IITBombay #Ecell #ESummit #EcellIITBombay #Entrepreneurship #Innovation #Teamwork #Gratitude #Success",
-    "imageUrl": "assets/images/linkedin/post_7295121217915695104.jpg",
-    "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7295121217915695104",
-    "date": "Feb 2025",
-    "badge": "Feb 2025",
-    "reactions": "31 reactions",
-    "reactionIcons": "👍 🚀",
-    "authorName": "Vivek Menon",
-    "authorAvatar": "assets/images/vivekm.png",
-    "authorRole": "@vivek-menon-",
-    "timestamp": "2025-02-11T16:47:15.000Z"
-  },
-  {
     "id": "7258128357135900673",
     "title": "I'm proud to share that our team GenesisX has successfull...",
-    "text": "I'm proud to share that our team GenesisX has successfully organized and conducted the Illuminate Entrepreneurship workshop by E-Cell, IIT Bombay! It was a fantastic experience. I'm attaching my certificate of recognition, which reflects our collective effort. Thank you to everyone involved!\n\n\n\n#IlluminateWorkshop #IITBombay #Entrepreneurship #ecell",
+    "text": "I'm proud to share that our team GenesisX has successfully organized and conducted the Illuminate Entrepreneurship workshop by E-Cell, IIT Bombay! It was a fantastic experience. I'm attaching my certificate of recognitio...",
     "imageUrl": "assets/images/linkedin/post_7258128357135900673.jpg",
     "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7258128357135900673",
     "date": "Nov 2024",
@@ -238,20 +208,5 @@
     "authorAvatar": "assets/images/vivekm.png",
     "authorRole": "@vivek-menon-",
     "timestamp": "2024-11-01T14:50:49.000Z"
-  },
-  {
-    "id": "7253074801597009920",
-    "title": "We are thrilled to announce that our team has been shortl...",
-    "text": "We are thrilled to announce that our team has been shortlisted for the Zonal Rounds of Eureka! 2024, Asia’s largest business model competition! 🎉 Out of 25,000+ registrations, we’ve made the cut, and our journey toward redefining the entrepreneurial landscape continues! 🌟\n\n\n\nGet ready to innovate, compete, and showcase your vision to the world. The stage is set—let's make an impact! 💡✨\n\n\n\n #Eureka2024 #Entrepreneurship #Innovation #StartupJourney #ZonalRounds #DreamBig #GameOn 🚀",
-    "imageUrl": "assets/images/linkedin/post_7253074801597009920.jpg",
-    "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7253074801597009920",
-    "date": "Oct 2024",
-    "badge": "Oct 2024",
-    "reactions": "52 reactions",
-    "reactionIcons": "👍 🚀",
-    "authorName": "Vivek Menon",
-    "authorAvatar": "assets/images/vivekm.png",
-    "authorRole": "@vivek-menon-",
-    "timestamp": "2024-10-18T16:09:48.000Z"
   }
 ]
