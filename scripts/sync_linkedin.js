@@ -153,24 +153,21 @@ async function syncAllPosts() {
       ? p.post_url 
       : `https://www.linkedin.com/feed/update/urn:li:activity:${postId}`;
 
-    const isRepost = p.reposted === 1 || (p.shared_post_owner_name && p.shared_post_owner_name.trim().length > 0);
     const prevPost = postMap.get(postId) || {};
 
     postMap.set(postId, {
       id: postId,
-      title: title,
+      title: prevPost.title || title,
       text: cleanContent || prevPost.text || '',
       imageUrl: localImg || prevPost.imageUrl,
       postUrl: postUrl,
       date: dateStr,
-      badge: prevPost.isRepost || isRepost ? `Repost • ${dateStr}` : (i === 0 ? `${dateStr} • Latest` : dateStr),
-      isRepost: prevPost.isRepost || isRepost,
-      repostHeader: prevPost.repostHeader || (isRepost ? 'Vivek Menon reposted this' : null),
+      badge: prevPost.badge || (i === 0 ? `${dateStr} • Latest` : dateStr),
       reactions: reactionsCount > 0 ? `${reactionsCount} reactions` : (prevPost.reactions || 'LinkedIn Activity'),
       reactionIcons: '👍 🚀',
-      authorName: prevPost.authorName || (p.shared_post_owner_name ? p.shared_post_owner_name.trim() : 'Vivek Menon'),
-      authorAvatar: prevPost.authorAvatar || 'assets/images/vivekm.png',
-      authorRole: prevPost.authorRole || '@vivek-menon-',
+      authorName: 'Vivek Menon',
+      authorAvatar: 'assets/images/vivekm.png',
+      authorRole: '@vivek-menon-',
       timestamp: dateObj.toISOString()
     });
   }

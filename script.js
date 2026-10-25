@@ -867,8 +867,6 @@ if (contactForm) {
   const lpReactionIcons = document.getElementById('lp-modal-reaction-icons');
   const lpReactions = document.getElementById('lp-modal-reactions');
   const lpBtn = document.getElementById('lp-modal-btn');
-  const lpRepostBar = document.getElementById('lp-modal-repost-bar');
-  const lpRepostText = document.getElementById('lp-modal-repost-text');
 
   if (!track) return;
 
@@ -884,7 +882,7 @@ if (contactForm) {
     "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7511385542631030786",
     "date": "Oct 2026",
     "badge": "Oct 2026 • Latest",
-    "reactions": "35 reactions",
+    "reactions": "37 reactions",
     "reactionIcons": "👍 🚀",
     "authorName": "Vivek Menon",
     "authorAvatar": "assets/images/vivekm.png",
@@ -1093,15 +1091,13 @@ if (contactForm) {
     "imageUrl": "assets/images/linkedin/post_7295121217915695104.jpg",
     "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7295121217915695104",
     "date": "Feb 2025",
-    "badge": "Repost • Feb 2025",
+    "badge": "Feb 2025",
     "reactions": "31 reactions",
     "reactionIcons": "👍 🚀",
-    "authorName": "E-cell SAC",
-    "authorAvatar": "assets/images/sta.jpg",
-    "authorRole": "Entrepreneurship Cell • St. Antony's College",
-    "timestamp": "2025-02-11T16:47:15.000Z",
-    "isRepost": true,
-    "repostHeader": "Vivek Menon reposted this"
+    "authorName": "Vivek Menon",
+    "authorAvatar": "assets/images/vivekm.png",
+    "authorRole": "@vivek-menon-",
+    "timestamp": "2025-02-11T16:47:15.000Z"
   },
   {
     "id": "7258128357135900673",
@@ -1125,15 +1121,13 @@ if (contactForm) {
     "imageUrl": "assets/images/linkedin/post_7253074801597009920.jpg",
     "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7253074801597009920",
     "date": "Oct 2024",
-    "badge": "Repost • Oct 2024",
+    "badge": "Oct 2024",
     "reactions": "52 reactions",
     "reactionIcons": "👍 🚀",
-    "authorName": "GenesisX / E-Cell",
-    "authorAvatar": "assets/images/sta.jpg",
-    "authorRole": "Innovation & Entrepreneurship",
-    "timestamp": "2024-10-18T16:09:48.000Z",
-    "isRepost": true,
-    "repostHeader": "Vivek Menon reposted this"
+    "authorName": "Vivek Menon",
+    "authorAvatar": "assets/images/vivekm.png",
+    "authorRole": "@vivek-menon-",
+    "timestamp": "2024-10-18T16:09:48.000Z"
   }
 ];
 
@@ -1146,15 +1140,6 @@ if (contactForm) {
   function openLinkedInModal(postId) {
     const post = activePostsMap.get(String(postId));
     if (!post || !modalOverlay) return;
-
-    if (lpRepostBar) {
-      if (post.isRepost) {
-        lpRepostBar.style.display = 'flex';
-        if (lpRepostText) lpRepostText.textContent = post.repostHeader || 'Vivek Menon reposted this';
-      } else {
-        lpRepostBar.style.display = 'none';
-      }
-    }
 
     if (lpAvatar) {
       lpAvatar.src = post.authorAvatar || 'assets/images/vivekm.png';
@@ -1233,17 +1218,11 @@ if (contactForm) {
     posts.forEach(p => activePostsMap.set(String(p.id), p));
 
     track.innerHTML = posts.map((post, idx) => `
-      <div class="whats-new-card glass ${idx === 0 ? 'active' : ''} ${!post.imageUrl ? 'text-only' : ''} ${post.isRepost ? 'is-repost' : ''}" data-id="${post.id}" tabindex="0">
-        ${post.isRepost ? `
-        <div class="wn-repost-bar">
-          <i class="fa-solid fa-repeat"></i>
-          <span>${escapeHtml(post.repostHeader || 'Vivek Menon reposted this')}</span>
-        </div>
-        ` : ''}
+      <div class="whats-new-card glass ${idx === 0 ? 'active' : ''} ${!post.imageUrl ? 'text-only' : ''}" data-id="${post.id}" tabindex="0">
         ${post.imageUrl ? `
         <div class="wn-media-wrap">
           <img src="${post.imageUrl}" alt="${escapeHtml(post.title)}" class="wn-media-img" loading="lazy" onerror="this.onerror=null;this.parentNode.style.display='none';" />
-          <div class="wn-media-badge ${post.isRepost ? 'repost-badge' : ''}">${escapeHtml(post.badge || post.date || 'Latest')}</div>
+          <div class="wn-media-badge">${escapeHtml(post.badge || post.date || 'Latest')}</div>
         </div>
         ` : ''}
         <div class="wn-card-content">
@@ -1256,7 +1235,7 @@ if (contactForm) {
               </div>
               <span class="wn-author-role">${escapeHtml(post.authorRole || 'MCA Student & Dept Convener')}</span>
             </div>
-            ${!post.imageUrl ? `<div class="wn-media-badge text-only-badge ${post.isRepost ? 'repost-badge' : ''}">${escapeHtml(post.badge || post.date || 'Latest')}</div>` : ''}
+            ${!post.imageUrl ? `<div class="wn-media-badge text-only-badge">${escapeHtml(post.badge || post.date || 'Latest')}</div>` : ''}
           </div>
           <h3 class="wn-card-title">${escapeHtml(post.title)}</h3>
           <div class="wn-post-text">${escapeHtml(post.text)}</div>
