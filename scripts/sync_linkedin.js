@@ -13,6 +13,11 @@ const fs = require('fs');
 const path = require('path');
 const https = require('https');
 const http = require('http');
+const dns = require('dns');
+
+if (dns.setDefaultResultOrder) {
+  dns.setDefaultResultOrder('ipv4first');
+}
 
 const DATA_FILE = path.join(__dirname, '..', 'assets', 'data', 'linkedin_posts.json');
 const IMAGES_DIR = path.join(__dirname, '..', 'assets', 'images', 'linkedin');
@@ -90,15 +95,28 @@ const LOCAL_FALLBACK_IMAGES = {
 
 async function syncAllPosts() {
   console.log('🔄 Fetching all LinkedIn posts from SociableKIT feed...');
+  
+  // Read existing posts first so reposts and manual additions are preserved
+  let existingPosts = [];
+  if (fs.existsSync(DATA_FILE)) {
+    try {
+      existingPosts = JSON.parse(fs.readFileSync(DATA_FILE, 'utf8'));
+    } catch (e) {
+      console.warn('Could not parse existing DATA_FILE, starting fresh');
+    }
+  }
+
   const json = await fetchJson(FEED_URL);
   const rawPosts = json.posts || [];
   console.log(`📥 Total posts received from feed: ${rawPosts.length}`);
 
-  const formattedPosts = [];
+  const postMap = new Map();
+  // Pre-fill map with existing posts
+  existingPosts.forEach(p => postMap.set(String(p.id), p));
 
   for (let i = 0; i < rawPosts.length; i++) {
     const p = rawPosts[i];
-    const postId = p.id || `post_${i}`;
+    const postId = String(p.id || `post_${i}`);
     const cleanContent = cleanText(p.description_raw || p.description);
     const lines = cleanContent.split('\n').filter(l => l.trim().length > 0 && !l.trim().startsWith('#'));
     let title = lines[0] || 'LinkedIn Post';
@@ -135,25 +153,32 @@ async function syncAllPosts() {
       ? p.post_url 
       : `https://www.linkedin.com/feed/update/urn:li:activity:${postId}`;
 
-    formattedPosts.push({
+    const isRepost = p.reposted === 1 || (p.shared_post_owner_name && p.shared_post_owner_name.trim().length > 0);
+    const prevPost = postMap.get(postId) || {};
+
+    postMap.set(postId, {
       id: postId,
       title: title,
-      text: cleanContent,
-      imageUrl: localImg,
+      text: cleanContent || prevPost.text || '',
+      imageUrl: localImg || prevPost.imageUrl,
       postUrl: postUrl,
       date: dateStr,
-      badge: i === 0 ? `${dateStr} • Latest` : dateStr,
-      reactions: reactionsCount > 0 ? `${reactionsCount} reactions` : 'LinkedIn Activity',
+      badge: prevPost.isRepost || isRepost ? `Repost • ${dateStr}` : (i === 0 ? `${dateStr} • Latest` : dateStr),
+      isRepost: prevPost.isRepost || isRepost,
+      repostHeader: prevPost.repostHeader || (isRepost ? 'Vivek Menon reposted this' : null),
+      reactions: reactionsCount > 0 ? `${reactionsCount} reactions` : (prevPost.reactions || 'LinkedIn Activity'),
       reactionIcons: '👍 🚀',
-      authorName: 'Vivek Menon',
-      authorAvatar: 'assets/images/vivekm.png',
-      authorRole: '@vivek-menon-',
+      authorName: prevPost.authorName || (p.shared_post_owner_name ? p.shared_post_owner_name.trim() : 'Vivek Menon'),
+      authorAvatar: prevPost.authorAvatar || 'assets/images/vivekm.png',
+      authorRole: prevPost.authorRole || '@vivek-menon-',
       timestamp: dateObj.toISOString()
     });
   }
 
-  fs.writeFileSync(DATA_FILE, JSON.stringify(formattedPosts, null, 2), 'utf8');
-  console.log(`✅ Successfully synced all ${formattedPosts.length} posts to assets/data/linkedin_posts.json!`);
+  const mergedPosts = Array.from(postMap.values()).sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+
+  fs.writeFileSync(DATA_FILE, JSON.stringify(mergedPosts, null, 2), 'utf8');
+  console.log(`✅ Successfully synced and preserved all ${mergedPosts.length} posts (including reposts) in assets/data/linkedin_posts.json!`);
 }
 
 syncAllPosts().catch(err => {

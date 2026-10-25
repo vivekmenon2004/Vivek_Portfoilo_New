@@ -3604,6 +3604,38 @@ body.cursor-pressed #cursor-ring {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+/* Repost Indicator Bar */
+.wn-repost-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  background: rgba(10, 102, 194, 0.1);
+  border-bottom: 1px solid rgba(10, 102, 194, 0.18);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #0a66c2;
+  letter-spacing: 0.01em;
+  flex-shrink: 0;
+}
+
+:root[data-theme="dark"] .wn-repost-bar {
+  background: rgba(112, 181, 249, 0.12);
+  border-bottom-color: rgba(112, 181, 249, 0.22);
+  color: #70b5f9;
+}
+
+.wn-repost-bar i {
+  font-size: 0.82rem;
+}
+
+.wn-media-badge.repost-badge,
+.text-only-badge.repost-badge {
+  background: rgba(10, 102, 194, 0.85);
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+}
+
 /* Card Body Content */
 .wn-card-content {
   padding: 18px 20px 16px;
